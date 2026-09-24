@@ -1,45 +1,46 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
 
-  <title>Bautizo de Mathías</title>
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <title>Bautizo y Cumpleaños #1 de Mathías</title>
 
   <!-- FUENTES -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link
-    href="https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"
     rel="stylesheet"
-  >
+  />
 
   <style>
 
     /* =====================================================
        COLORES
-       ===================================================== */
+    ===================================================== */
 
     :root {
       --navy: #2F4156;
       --teal: #567C8D;
       --sky: #C8D9E6;
-      --beige: #F5EFEB;
+      --cream: #F5EFEB;
       --white: #FFFFFF;
-      --line: #8EA9BA;
+      --line: #9CB4C0;
     }
 
 
     /* =====================================================
        GENERAL
-       ===================================================== */
+    ===================================================== */
 
     * {
       box-sizing: border-box;
-      margin: 0;
-      padding: 0;
     }
 
     html {
@@ -47,100 +48,78 @@
     }
 
     body {
-      min-height: 100vh;
+      margin: 0;
 
-      font-family:
-        "Cormorant Garamond",
-        serif;
+      font-family: "Cormorant Garamond", serif;
 
       color: var(--navy);
 
       background:
         linear-gradient(
-          rgba(200, 217, 230, 0.10),
-          rgba(200, 217, 230, 0.10)
+          rgba(255,255,255,0.05),
+          rgba(255,255,255,0.05)
         ),
         url("fondo-bautizo.png");
 
       background-size: cover;
       background-position: center top;
-      background-repeat: no-repeat;
       background-attachment: fixed;
+
+      min-height: 100vh;
     }
 
 
     /* =====================================================
-       PÁGINA
-       ===================================================== */
+       CONTENEDOR
+    ===================================================== */
 
-    .page {
-      width: min(900px, 94%);
+    .pagina {
+      width: min(94%, 760px);
       margin: 0 auto;
-
-      padding:
-        45px
-        0
-        60px;
+      padding: 40px 0 70px;
     }
 
 
     /* =====================================================
        TARJETA PRINCIPAL
-       ===================================================== */
+    ===================================================== */
 
-    .invitation {
+    .invitacion {
       position: relative;
 
-      width: 100%;
+      background: rgba(250, 247, 242, 0.96);
+
+      border: 3px solid rgba(86, 124, 141, 0.55);
+
+      border-radius: 90px 90px 45px 45px;
 
       padding:
-        75px
-        70px
+        85px
+        55px
         45px;
 
-      background:
-        linear-gradient(
-          180deg,
-          rgba(255,255,255,.98),
-          rgba(245,239,235,.98)
-        );
-
-      border:
-        3px solid
-        rgba(142,169,186,.85);
-
-      border-radius:
-        150px
-        150px
-        35px
-        35px;
-
-      text-align: center;
-
       box-shadow:
-        0 20px 45px
-        rgba(47,65,86,.16);
+        0 12px 35px rgba(47, 65, 86, 0.16);
+
+      overflow: visible;
     }
 
 
     /* BORDE INTERIOR */
 
-    .invitation::before {
+    .invitacion::before {
       content: "";
 
       position: absolute;
 
-      inset: 13px;
+      top: 18px;
+      left: 18px;
+      right: 18px;
+      bottom: 18px;
 
-      border:
-        1.5px solid
-        rgba(142,169,186,.75);
+      border: 1.5px solid rgba(86, 124, 141, 0.55);
 
-      border-radius:
-        137px
-        137px
-        27px
-        27px;
+      border-radius: 72px 72px 34px 34px;
 
       pointer-events: none;
     }
@@ -148,298 +127,347 @@
 
     /* =====================================================
        MEDALLÓN DE LA CRUZ
-       ===================================================== */
+    ===================================================== */
 
-    .cross-medallion {
+    .medallon {
       position: absolute;
 
-      top: 150px;
-      left: -48px;
+      width: 125px;
+      height: 125px;
 
-      width: 128px;
-      height: 128px;
-
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      z-index: 5;
+      left: -36px;
+      top: 205px;
 
       border-radius: 50%;
 
-      background:
-        radial-gradient(
-          circle,
-          #fffdf9 0%,
-          #f5efeb 68%,
-          #eee4dc 100%
-        );
+      background: #f7f1e9;
 
-      border:
-        1.5px solid
-        #9aafbb;
+      border: 1px solid rgba(86, 124, 141, 0.25);
 
       box-shadow:
-        0 5px 15px
-        rgba(47,65,86,.13),
+        0 7px 18px rgba(47, 65, 86, 0.13);
 
-        inset 0 0 0 6px
-        #f5efeb,
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
-        inset 0 0 0 7px
-        rgba(86,124,141,.35);
+      z-index: 5;
     }
 
-
-    /* BORDE DECORATIVO */
-
-    .cross-medallion::before {
+    .medallon::before {
       content: "";
 
       position: absolute;
 
-      width: 142px;
-      height: 142px;
+      width: 94px;
+      height: 94px;
 
       border-radius: 50%;
 
-      z-index: -1;
-
-      background:
-        repeating-conic-gradient(
-          from 0deg,
-
-          #f5efeb 0deg 7deg,
-
-          #d9cfc8 7deg 9deg,
-
-          #f5efeb 9deg 16deg
-        );
-
-      -webkit-mask:
-        radial-gradient(
-          circle,
-          transparent 0 57px,
-          #000 58px
-        );
-
-      mask:
-        radial-gradient(
-          circle,
-          transparent 0 57px,
-          #000 58px
-        );
-
-      filter:
-        drop-shadow(
-          0 3px 3px
-          rgba(47,65,86,.08)
-        );
+      border: 1px solid #9db3bd;
     }
 
 
     /* CRUZ */
 
-    .cross {
+    .cruz {
       position: relative;
 
-      width: 19px;
-      height: 65px;
+      width: 26px;
+      height: 62px;
 
-      border-radius:
-        7px
-        7px
-        5px
-        5px;
+      background: linear-gradient(
+        180deg,
+        #6f98aa,
+        #3f6679
+      );
 
-      background:
-        linear-gradient(
-          90deg,
-          #7895a5,
-          #567c8d,
-          #7895a5
-        );
-
-      box-shadow:
-        inset 0 0 0 1px
-        rgba(47,65,86,.16);
+      border-radius: 10px;
     }
 
-
-    /* BRAZO DE LA CRUZ */
-
-    .cross::before {
+    .cruz::before {
       content: "";
 
       position: absolute;
 
-      width: 52px;
-      height: 18px;
+      width: 58px;
+      height: 24px;
 
       left: 50%;
-      top: 17px;
+      top: 18px;
 
-      transform:
-        translateX(-50%);
+      transform: translateX(-50%);
 
-      border-radius: 7px;
+      background: linear-gradient(
+        90deg,
+        #6f98aa,
+        #3f6679
+      );
 
-      background:
-        linear-gradient(
-          180deg,
-          #7895a5,
-          #567c8d
-        );
-
-      box-shadow:
-        inset 0 0 0 1px
-        rgba(47,65,86,.14);
+      border-radius: 10px;
     }
 
-
-    /* DETALLE CENTRAL */
-
-    .cross::after {
+    .cruz::after {
       content: "✦";
 
       position: absolute;
 
+      color: white;
+
+      font-size: 9px;
+
+      top: 24px;
       left: 50%;
-      top: 26px;
 
-      transform:
-        translate(-50%, -50%);
-
-      color: #f5efeb;
-
-      font-size: 8px;
+      transform: translateX(-50%);
     }
 
 
     /* =====================================================
        CABECERA
-       ===================================================== */
+    ===================================================== */
 
-    .mi {
-      font-size: 25px;
+    .encabezado {
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .invitacion-texto {
+      margin: 0 0 8px;
+
+      font-size: 19px;
+
+      letter-spacing: 7px;
+
+      text-transform: uppercase;
+
+      font-weight: 500;
+    }
+
+    .bautizo {
+      margin: 0;
+
+      font-size: 48px;
 
       letter-spacing: 9px;
 
       font-weight: 500;
     }
 
+    .cumple {
+      margin: 12px 0 0;
 
-    .bautizo {
-      margin-top: 2px;
+      font-size: 24px;
 
-      font-size: 46px;
-
-      letter-spacing: 10px;
+      letter-spacing: 6px;
 
       font-weight: 500;
     }
 
 
-    /* =====================================================
-       CORAZÓN Y LÍNEAS
-       ===================================================== */
+    /* LÍNEA DEBAJO DE CUMPLEAÑOS */
 
-    .heart-line {
-      display: flex;
+    .linea-cumple {
+      width: 52%;
 
-      justify-content: center;
-      align-items: center;
+      height: 1.5px;
 
-      gap: 12px;
+      margin: 16px auto 22px;
 
-      margin:
-        7px
-        auto
-        5px;
-    }
-
-
-    .heart-line span:first-child,
-    .heart-line span:last-child {
-      width: 85px;
-      height: 1px;
-
-      background:
-        var(--line);
-    }
-
-
-    .heart {
-      color: var(--teal);
-
-      font-size: 13px;
-    }
-
-
-    .birthday {
-      font-size: 18px;
-
-      letter-spacing: 5px;
+      background: #7da1b2;
     }
 
 
     /* =====================================================
        NOMBRE
-       ===================================================== */
+    ===================================================== */
 
-    .name {
-      margin:
-        22px
-        0
-        -5px;
+    .nombre {
+      margin: 5px 0 -2px;
 
-      font-family:
-        "Allura",
-        cursive;
+      font-family: "Allura", cursive;
 
-      font-size: 110px;
-
-      font-weight: 400;
+      font-size: 105px;
 
       line-height: 1;
 
-      color: var(--navy);
+      font-weight: 400;
+
+      color: #29445d;
     }
 
+    .apellido {
+      margin: 0;
 
-    .lastname {
-      font-size: 29px;
+      font-size: 26px;
+
+      letter-spacing: 8px;
 
       font-weight: 500;
-
-      letter-spacing: 7px;
     }
 
 
     /* =====================================================
-       DIVISORES
-       ===================================================== */
+       ADORNO BOTÁNICO
+    ===================================================== */
 
-    .divider {
-      width: 88%;
+    .ramitas {
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
-      height: 1px;
+      gap: 28px;
 
-      margin:
-        27px
-        auto;
+      margin: 22px auto 16px;
 
-      background:
-        rgba(142,169,186,.75);
+      color: #7895a1;
+
+      font-size: 26px;
+    }
+
+    .ramitas span:first-child {
+      transform: rotate(8deg);
+    }
+
+    .ramitas span:last-child {
+      transform: scaleX(-1) rotate(8deg);
+    }
+
+
+    /* =====================================================
+       PADRES Y PADRINOS
+    ===================================================== */
+
+    .familia {
+      position: relative;
+
+      width: 92%;
+
+      margin: 15px auto 25px;
+
+      text-align: center;
+
+      z-index: 2;
+    }
+
+    .familia-bloque {
+      width: 100%;
+
+      margin: 0 auto 28px;
+    }
+
+
+    /* TÍTULOS */
+
+    .titulo-con-lineas {
+      width: 100%;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      gap: 22px;
+
+      margin-bottom: 13px;
+    }
+
+    .titulo-con-lineas h3 {
+      margin: 0;
+
+      white-space: nowrap;
+
+      font-size: 23px;
+
+      letter-spacing: 7px;
+
+      font-weight: 500;
+    }
+
+    .titulo-con-lineas .linea {
+      flex: 1;
+
+      height: 1.5px;
+
+      background: #7f9eac;
+    }
+
+
+    /* PADRES */
+
+    .padres-nombres {
+      display: flex;
+
+      justify-content: center;
+      align-items: center;
+
+      gap: 24px;
+
+      font-size: 24px;
+    }
+
+    .separador-vertical {
+      display: block;
+
+      width: 1px;
+      height: 42px;
+
+      background: #8eacb8;
+    }
+
+
+    /* PADRINOS */
+
+    .padrinos-bloque {
+      margin-top: 30px;
+    }
+
+    .padrinos-grid {
+      display: grid;
+
+      grid-template-columns:
+        1fr
+        auto
+        1fr;
+
+      align-items: center;
+
+      gap: 28px;
+
+      font-size: 23px;
+    }
+
+    .padrinos-grid p {
+      margin: 3px 0;
+    }
+
+    .padrinos-separador {
+      height: 62px;
+    }
+
+
+    /* =====================================================
+       LÍNEA DIVISORIA COMPLETA
+    ===================================================== */
+
+    .divisor-completo {
+      width: 92%;
+
+      height: 1.5px;
+
+      margin: 28px auto 30px;
+
+      background: #7899a8;
     }
 
 
     /* =====================================================
        FECHA + IGLESIA
-       ===================================================== */
+    ===================================================== */
 
-    .details {
-      width: 88%;
+    .evento {
+      width: 92%;
 
       margin: auto;
 
@@ -450,1253 +478,1177 @@
         1px
         1fr;
 
+      gap: 30px;
+
       align-items: center;
 
-      gap: 28px;
-    }
+      text-align: center;
 
-
-    .vertical-line {
       position: relative;
 
+      z-index: 2;
+    }
+
+    .evento-separador {
       width: 1px;
-      height: 150px;
+      height: 190px;
 
-      background:
-        rgba(142,169,186,.7);
+      background: #9bb5c0;
     }
 
 
-    .vertical-line::after {
-      content: "♥";
+    /* FECHA */
 
-      position: absolute;
-
-      top: 50%;
-      left: 50%;
-
-      transform:
-        translate(-50%, -50%);
-
-      color: var(--teal);
-
-      background: var(--beige);
-
-      padding: 5px;
-
-      font-size: 13px;
-    }
-
-
-    .weekday {
-      font-size: 20px;
-
-      letter-spacing: 5px;
-    }
-
-
-    .day {
-      margin-top: 4px;
-
-      font-size: 65px;
-
-      line-height: .9;
-    }
-
-
-    .month {
-      margin-top: 5px;
-
-      font-family:
-        "Allura",
-        cursive;
-
-      font-size: 38px;
-    }
-
-
-    .year {
-      margin-top: 2px;
+    .dia-semana {
+      margin: 0;
 
       font-size: 22px;
 
       letter-spacing: 6px;
     }
 
+    .dia-numero {
+      margin: 3px 0 -4px;
 
-    .time {
-      margin-bottom: 8px;
+      font-size: 67px;
 
-      font-size: 34px;
+      line-height: 1;
 
-      font-weight: 600;
+      font-weight: 500;
+    }
+
+    .mes {
+      margin: 4px 0;
+
+      font-family: "Allura", cursive;
+
+      font-size: 48px;
+
+      line-height: 1;
+    }
+
+    .anio {
+      margin: 8px 0 0;
+
+      font-size: 20px;
+
+      letter-spacing: 7px;
     }
 
 
-    .church {
-      font-size: 24px;
+    /* IGLESIA */
+
+    .iglesia-icono {
+      margin-bottom: 5px;
+
+      font-size: 42px;
+    }
+
+    .iglesia-nombre {
+      margin: 0;
+
+      font-size: 26px;
 
       letter-spacing: 3px;
 
       line-height: 1.05;
+
+      text-transform: uppercase;
+    }
+
+    .santuario {
+      margin: 8px 0 12px;
+
+      font-size: 20px;
+
+      line-height: 1.15;
+    }
+
+    .hora {
+      display: flex;
+
+      justify-content: center;
+      align-items: center;
+
+      gap: 10px;
+
+      margin-top: 10px;
+
+      font-size: 28px;
+
+      font-weight: 500;
+    }
+
+    .reloj {
+      width: 38px;
+      height: 38px;
+
+      border: 2px solid var(--navy);
+
+      border-radius: 50%;
+
+      position: relative;
+    }
+
+    .reloj::before {
+      content: "";
+
+      position: absolute;
+
+      width: 2px;
+      height: 10px;
+
+      background: var(--navy);
+
+      left: 17px;
+      top: 7px;
+    }
+
+    .reloj::after {
+      content: "";
+
+      position: absolute;
+
+      width: 9px;
+      height: 2px;
+
+      background: var(--navy);
+
+      left: 17px;
+      top: 16px;
+
+      transform: rotate(30deg);
+
+      transform-origin: left center;
     }
 
 
-    .church-address {
-      margin-top: 10px;
+    /* =====================================================
+       FRASE
+    ===================================================== */
 
-      font-size: 18px;
+    .frase {
+      width: 92%;
+
+      margin: 28px auto 0;
+
+      padding-top: 24px;
+
+      border-top: 1.5px solid #7899a8;
+
+      text-align: center;
+
+      font-size: 25px;
+
+      line-height: 1.35;
+
+      font-style: italic;
+
+      position: relative;
+
+      z-index: 2;
+    }
+
+    .ramitas-final {
+      margin-top: 22px;
+      margin-bottom: 0;
+    }
+
+
+    /* =====================================================
+       CUENTA REGRESIVA
+    ===================================================== */
+
+    .countdown-section {
+      text-align: center;
+
+      padding: 20px 0 10px;
+    }
+
+    .countdown-title {
+      margin: 0 0 15px;
+
+      font-family: "Allura", cursive;
+
+      font-size: 60px;
+
+      font-weight: 400;
+
+      color: #29445d;
+    }
+
+    .countdown {
+      display: grid;
+
+      grid-template-columns:
+        repeat(4, 1fr);
+
+      gap: 12px;
+    }
+
+    .countdown-box {
+      min-height: 110px;
+
+      border-radius: 22px;
+
+      background: linear-gradient(
+        145deg,
+        #31576b,
+        #567C8D
+      );
+
+      color: white;
+
+      display: flex;
+
+      flex-direction: column;
+
+      align-items: center;
+      justify-content: center;
+
+      box-shadow:
+        0 8px 18px rgba(47, 65, 86, 0.13);
+    }
+
+    .countdown-number {
+      font-size: 42px;
+
+      line-height: 1;
+    }
+
+    .countdown-label {
+      margin-top: 8px;
+
+      font-size: 12px;
+
+      letter-spacing: 3px;
+    }
+
+
+    /* =====================================================
+       TARJETAS INFERIORES
+    ===================================================== */
+
+    .info-card {
+      margin-top: 25px;
+
+      padding: 30px;
+
+      background: rgba(255,255,255,0.93);
+
+      border-radius: 35px;
+
+      box-shadow:
+        0 9px 25px rgba(47, 65, 86, 0.12);
+    }
+
+    .info-top {
+      display: grid;
+
+      grid-template-columns:
+        90px
+        1fr;
+
+      gap: 20px;
+
+      align-items: center;
+    }
+
+    .info-icon {
+      width: 78px;
+      height: 78px;
+
+      border-radius: 50%;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      background: var(--navy);
+
+      color: white;
+
+      font-size: 34px;
+    }
+
+    .info-icon.whatsapp {
+      background: var(--teal);
+    }
+
+    .info-small {
+      margin: 0;
+
+      font-size: 16px;
+
+      letter-spacing: 6px;
+
+      text-transform: uppercase;
+    }
+
+    .info-title {
+      margin: 2px 0;
+
+      font-size: 31px;
+
+      line-height: 1;
+    }
+
+    .info-description {
+      margin: 4px 0 0;
+
+      font-size: 19px;
 
       line-height: 1.15;
     }
 
 
     /* =====================================================
-       PADRINOS
-       ===================================================== */
+       BOTONES
+    ===================================================== */
 
-    .section-title {
-      margin-bottom: 15px;
-
-      font-size: 24px;
-
-      letter-spacing: 7px;
-    }
-
-
-    .godparents {
-      width: 88%;
-
-      margin: auto;
-
-      display: grid;
-
-      grid-template-columns:
-        1fr
-        1px
-        1fr;
-
-      align-items: center;
-
-      gap: 30px;
-
-      font-size: 22px;
-
-      line-height: 1.35;
-    }
-
-
-    .godparents-line {
-      position: relative;
-
-      width: 1px;
-      height: 65px;
-
-      background:
-        rgba(142,169,186,.6);
-    }
-
-
-    .godparents-line::after {
-      content: "♥";
-
-      position: absolute;
-
-      left: 50%;
-      top: 50%;
-
-      transform:
-        translate(-50%, -50%);
-
-      padding: 4px;
-
-      color: var(--teal);
-
-      background: var(--beige);
-
-      font-size: 12px;
-    }
-
-
-    /* =====================================================
-       FRASE
-       ===================================================== */
-
-    .phrase {
-      width: 78%;
-
-      margin:
-        26px
-        auto
-        4px;
-
-      font-size: 25px;
-
-      font-style: italic;
-
-      line-height: 1.25;
-    }
-
-
-    .leaves {
-      margin-top: 23px;
-
-      color: var(--teal);
-
-      font-size: 25px;
-
-      letter-spacing: 4px;
-
-      opacity: .75;
-    }
-
-
-    /* =====================================================
-       CUENTA REGRESIVA
-       ===================================================== */
-
-    .countdown-section {
-      padding-top: 25px;
-
-      text-align: center;
-    }
-
-
-    .countdown-title {
-      font-family:
-        "Allura",
-        cursive;
-
-      font-size: 52px;
-
-      color: var(--navy);
-
-      text-shadow:
-        0 2px 8px
-        rgba(255,255,255,.8);
-    }
-
-
-    .timer {
-      width:
-        min(650px, 95%);
-
-      margin:
-        13px
-        auto
-        0;
-
-      display: grid;
-
-      grid-template-columns:
-        repeat(4, 1fr);
-
-      gap: 15px;
-    }
-
-
-    .time-box {
-      padding:
-        18px
-        5px
-        14px;
-
-      border-radius: 12px;
-
-      background:
-        linear-gradient(
-          135deg,
-          #36566D,
-          #567C8D
-        );
-
-      color:
-        var(--white);
-
-      box-shadow:
-        0 7px 16px
-        rgba(47,65,86,.15);
-    }
-
-
-    .number {
+    .boton {
       display: block;
 
-      font-size: 43px;
-
-      line-height: 1;
-    }
-
-
-    .label {
-      display: block;
-
-      margin-top: 5px;
-
-      font-size: 12px;
-
-      letter-spacing: 2px;
-    }
-
-
-    /* =====================================================
-       MAPS + WHATSAPP
-       ===================================================== */
-
-    .action-card {
       width: 100%;
 
-      margin-top: 18px;
+      margin-top: 22px;
 
-      padding:
-        17px
-        24px;
-
-      display: flex;
-
-      justify-content:
-        space-between;
-
-      align-items: center;
-
-      gap: 20px;
-
-      border-radius: 22px;
-
-      background:
-        rgba(255,255,255,.95);
-
-      box-shadow:
-        0 9px 25px
-        rgba(47,65,86,.14);
-    }
-
-
-    .action-left {
-      display: flex;
-
-      align-items: center;
-
-      gap: 17px;
-
-      text-align: left;
-    }
-
-
-    .circle-icon {
-      width: 58px;
-      height: 58px;
-
-      flex-shrink: 0;
-
-      display: flex;
-
-      justify-content: center;
-      align-items: center;
-
-      border-radius: 50%;
-
-      background:
-        var(--navy);
-
-      color: white;
-
-      font-size: 26px;
-    }
-
-
-    .action-small {
-      font-size: 13px;
-
-      letter-spacing: 4px;
-
-      color:
-        rgba(47,65,86,.65);
-    }
-
-
-    .action-title {
-      font-size: 26px;
-
-      line-height: 1;
-    }
-
-
-    .action-description {
-      margin-top: 3px;
-
-      font-size: 16px;
-    }
-
-
-    /* =====================================================
-       BOTONES
-       ===================================================== */
-
-    .button {
-      flex-shrink: 0;
-
-      min-width: 280px;
-
-      padding:
-        15px
-        25px;
+      padding: 21px 20px;
 
       border-radius: 40px;
-
-      background:
-        linear-gradient(
-          135deg,
-          var(--navy),
-          #365B74
-        );
-
-      color: white;
 
       text-align: center;
 
       text-decoration: none;
 
-      font-size: 15px;
+      text-transform: uppercase;
 
-      letter-spacing: 2px;
+      font-family: "Cormorant Garamond", serif;
 
-      box-shadow:
-        0 5px 13px
-        rgba(47,65,86,.18);
+      font-size: 17px;
+
+      letter-spacing: 5px;
+
+      color: white;
+
+      background: linear-gradient(
+        90deg,
+        #294b62,
+        #426f88
+      );
 
       transition:
-        transform .25s ease,
-        box-shadow .25s ease;
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
     }
 
-
-    .button:hover {
-      transform:
-        translateY(-3px);
+    .boton:hover {
+      transform: translateY(-2px);
 
       box-shadow:
-        0 9px 18px
-        rgba(47,65,86,.25);
+        0 7px 16px rgba(47, 65, 86, 0.2);
     }
 
-
-    /* =====================================================
-       WHATSAPP
-       ===================================================== */
-
-    .whatsapp-card {
-      background:
-        rgba(245,249,251,.96);
-    }
-
-
-    .whatsapp-card .circle-icon {
-      background:
-        var(--teal);
-    }
-
-
-    .whatsapp-card .button {
-      background:
-        linear-gradient(
-          135deg,
-          #567C8D,
-          #6F98A8
-        );
+    .boton-whatsapp {
+      background: linear-gradient(
+        90deg,
+        #4e7f91,
+        #74a3b3
+      );
     }
 
 
     /* =====================================================
        FOOTER
-       ===================================================== */
+    ===================================================== */
 
-    footer {
-      padding:
-        30px
-        10px
-        10px;
+    .footer {
+      padding: 45px 10px 10px;
 
       text-align: center;
-
-      color: var(--navy);
     }
 
+    .footer-nombre {
+      margin: 0;
 
-    .footer-name {
-      font-size: 18px;
+      font-size: 19px;
+
+      letter-spacing: 7px;
+    }
+
+    .footer-linea {
+      width: 60px;
+      height: 1px;
+
+      margin: 14px auto;
+
+      background: var(--navy);
+    }
+
+    .footer-evento {
+      margin: 0;
+
+      font-size: 13px;
 
       letter-spacing: 6px;
     }
 
 
-    .footer-heart {
-      margin: 5px 0;
-
-      font-size: 12px;
-    }
-
-
-    .footer-date {
-      font-size: 14px;
-
-      letter-spacing: 5px;
-    }
-
-
     /* =====================================================
-       CELULARES
-       ===================================================== */
+       RESPONSIVE
+    ===================================================== */
 
-    @media (max-width: 700px) {
+    @media (max-width: 650px) {
 
-      body {
-        background-attachment: scroll;
-
-        background-size: auto 100%;
+      .pagina {
+        width: 100%;
+        padding: 25px 18px 50px;
       }
 
-
-      .page {
-        width: 94%;
-
-        padding-top: 25px;
-      }
-
-
-      .invitation {
+      .invitacion {
         padding:
-          60px
-          22px
+          75px
+          25px
           35px;
 
         border-radius:
-          90px
-          90px
-          25px
-          25px;
+          65px
+          65px
+          38px
+          38px;
       }
 
+      .invitacion::before {
+        top: 14px;
+        left: 14px;
+        right: 14px;
+        bottom: 14px;
 
-      .invitation::before {
         border-radius:
-          78px
-          78px
-          18px
-          18px;
+          52px
+          52px
+          29px
+          29px;
       }
 
+      .medallon {
+        width: 100px;
+        height: 100px;
 
-      /* CRUZ EN CELULAR */
-
-      .cross-medallion {
-        width: 88px;
-        height: 88px;
-
-        top: 140px;
-        left: -17px;
+        left: -27px;
+        top: 205px;
       }
 
-
-      .cross-medallion::before {
-        width: 98px;
-        height: 98px;
-
-        -webkit-mask:
-          radial-gradient(
-            circle,
-            transparent 0 39px,
-            #000 40px
-          );
-
-        mask:
-          radial-gradient(
-            circle,
-            transparent 0 39px,
-            #000 40px
-          );
+      .medallon::before {
+        width: 76px;
+        height: 76px;
       }
 
-
-      .cross {
-        width: 13px;
-        height: 45px;
+      .cruz {
+        transform: scale(0.8);
       }
 
-
-      .cross::before {
-        width: 36px;
-        height: 13px;
-
-        top: 12px;
+      .invitacion-texto {
+        font-size: 13px;
+        letter-spacing: 4px;
       }
-
-
-      .cross::after {
-        top: 18px;
-
-        font-size: 6px;
-      }
-
-
-      /* TEXTO */
-
-      .mi {
-        font-size: 18px;
-
-        letter-spacing: 6px;
-      }
-
 
       .bautizo {
-        font-size: 31px;
-
-        letter-spacing: 6px;
+        font-size: 37px;
+        letter-spacing: 7px;
       }
 
-
-      .birthday {
-        font-size: 13px;
-
-        letter-spacing: 3px;
-      }
-
-
-      .name {
-        margin-top: 20px;
-
-        font-size: 75px;
-      }
-
-
-      .lastname {
-        font-size: 19px;
-
+      .cumple {
+        font-size: 18px;
         letter-spacing: 4px;
       }
 
+      .linea-cumple {
+        width: 60%;
+      }
 
-      /* FECHA */
+      .nombre {
+        font-size: 79px;
+      }
 
-      .details {
-        width: 100%;
-
-        gap: 12px;
+      .apellido {
+        font-size: 18px;
+        letter-spacing: 5px;
       }
 
 
-      .weekday {
-        font-size: 14px;
+      /* PADRES */
 
-        letter-spacing: 3px;
+      .familia {
+        width: 92%;
       }
 
-
-      .day {
-        font-size: 50px;
+      .titulo-con-lineas {
+        gap: 11px;
       }
 
-
-      .month {
-        font-size: 29px;
-      }
-
-
-      .year {
+      .titulo-con-lineas h3 {
         font-size: 16px;
-
         letter-spacing: 4px;
       }
 
-
-      .time {
-        font-size: 27px;
-      }
-
-
-      .church {
+      .padres-nombres {
+        gap: 12px;
         font-size: 17px;
-
-        letter-spacing: 2px;
       }
 
-
-      .church-address {
-        font-size: 13px;
-      }
-
-
-      .vertical-line {
-        height: 125px;
+      .separador-vertical {
+        height: 35px;
       }
 
 
       /* PADRINOS */
 
-      .section-title {
-        font-size: 18px;
-
-        letter-spacing: 5px;
-      }
-
-
-      .godparents {
-        width: 100%;
-
-        gap: 10px;
+      .padrinos-grid {
+        gap: 11px;
 
         font-size: 16px;
       }
 
+      .padrinos-separador {
+        height: 55px;
+      }
 
-      /* FRASE */
 
-      .phrase {
-        width: 92%;
+      /* EVENTO */
 
-        font-size: 20px;
+      .evento {
+        width: 94%;
+
+        gap: 13px;
+      }
+
+      .evento-separador {
+        height: 170px;
+      }
+
+      .dia-semana {
+        font-size: 15px;
+        letter-spacing: 4px;
+      }
+
+      .dia-numero {
+        font-size: 53px;
+      }
+
+      .mes {
+        font-size: 39px;
+      }
+
+      .anio {
+        font-size: 14px;
+        letter-spacing: 5px;
+      }
+
+      .iglesia-icono {
+        font-size: 33px;
+      }
+
+      .iglesia-nombre {
+        font-size: 18px;
+        letter-spacing: 2px;
+      }
+
+      .santuario {
+        font-size: 15px;
+      }
+
+      .hora {
+        font-size: 21px;
+      }
+
+      .reloj {
+        width: 31px;
+        height: 31px;
+      }
+
+      .reloj::before {
+        left: 13px;
+        top: 5px;
+      }
+
+      .reloj::after {
+        left: 13px;
+        top: 14px;
+      }
+
+      .frase {
+        font-size: 19px;
       }
 
 
       /* CONTADOR */
 
       .countdown-title {
-        font-size: 42px;
+        font-size: 47px;
       }
 
-
-      .timer {
+      .countdown {
         gap: 7px;
       }
 
+      .countdown-box {
+        min-height: 88px;
 
-      .time-box {
-        padding:
-          13px
-          2px
-          10px;
+        border-radius: 17px;
+      }
+
+      .countdown-number {
+        font-size: 30px;
+      }
+
+      .countdown-label {
+        font-size: 9px;
+
+        letter-spacing: 1.5px;
       }
 
 
-      .number {
-        font-size: 29px;
+      /* TARJETAS */
+
+      .info-card {
+        padding: 22px;
+
+        border-radius: 27px;
       }
 
+      .info-top {
+        grid-template-columns:
+          65px
+          1fr;
 
-      .label {
-        font-size: 8px;
-
-        letter-spacing: 1px;
+        gap: 14px;
       }
 
+      .info-icon {
+        width: 60px;
+        height: 60px;
 
-      /* MAPS / WHATSAPP */
-
-      .action-card {
-        flex-direction: column;
-
-        padding:
-          18px
-          16px;
+        font-size: 26px;
       }
 
-
-      .action-left {
-        width: 100%;
-      }
-
-
-      .circle-icon {
-        width: 50px;
-        height: 50px;
-
-        font-size: 23px;
-      }
-
-
-      .action-title {
-        font-size: 22px;
-      }
-
-
-      .action-description {
-        font-size: 14px;
-      }
-
-
-      .button {
-        width: 100%;
-
-        min-width: 0;
-
-        font-size: 13px;
-      }
-
-
-      /* FOOTER */
-
-      .footer-name {
-        font-size: 14px;
+      .info-small {
+        font-size: 11px;
 
         letter-spacing: 4px;
       }
 
+      .info-title {
+        font-size: 24px;
+      }
 
-      .footer-date {
-        font-size: 11px;
+      .info-description {
+        font-size: 15px;
+      }
+
+      .boton {
+        padding: 17px 12px;
+
+        font-size: 13px;
 
         letter-spacing: 3px;
+      }
+
+      .footer-nombre {
+        font-size: 14px;
+
+        letter-spacing: 5px;
+      }
+
+      .footer-evento {
+        font-size: 10px;
+
+        letter-spacing: 4px;
       }
 
     }
 
 
-    /* =====================================================
-       CELULARES PEQUEÑOS
-       ===================================================== */
+    /* TELÉFONOS MUY PEQUEÑOS */
 
     @media (max-width: 390px) {
 
-      .name {
-        font-size: 65px;
+      .nombre {
+        font-size: 69px;
       }
 
-
-      .lastname {
-        font-size: 16px;
+      .padres-nombres {
+        font-size: 15px;
       }
 
-
-      .godparents {
+      .padrinos-grid {
         font-size: 14px;
       }
 
+      .evento {
+        gap: 8px;
+      }
 
-      .phrase {
+      .iglesia-nombre {
+        font-size: 16px;
+      }
+
+      .santuario {
+        font-size: 13px;
+      }
+
+      .hora {
         font-size: 18px;
       }
 
     }
 
   </style>
-
 </head>
 
 
 <body>
 
-  <main class="page">
+  <main class="pagina">
 
 
     <!-- ===================================================
-         INVITACIÓN
-         =================================================== -->
+         TARJETA PRINCIPAL
+    ==================================================== -->
 
-    <section class="invitation">
+    <section class="invitacion">
 
+      <!-- MEDALLÓN -->
 
-      <!-- MEDALLÓN CON CRUZ -->
-
-      <div class="cross-medallion">
-
-        <div class="cross"></div>
-
+      <div class="medallon">
+        <div class="cruz"></div>
       </div>
 
 
-      <!-- CABECERA -->
+      <!-- ENCABEZADO -->
 
-      <div class="mi">
-        MI
-      </div>
+      <header class="encabezado">
+
+        <p class="invitacion-texto">
+          Te invito a celebrar mi
+        </p>
+
+        <h1 class="bautizo">
+          BAUTIZO
+        </h1>
+
+        <p class="cumple">
+          Y CUMPLEAÑOS #1
+        </p>
+
+        <div class="linea-cumple"></div>
 
 
-      <div class="bautizo">
-        BAUTIZO
-      </div>
+        <h2 class="nombre">
+          Mathías
+        </h2>
+
+        <p class="apellido">
+          PARRA BELLORIN
+        </p>
 
 
-      <div class="heart-line">
-
-        <span></span>
-
-        <div class="heart">
-          ♥
+        <div class="ramitas">
+          <span>❧</span>
+          <span>❧</span>
         </div>
 
-        <span></span>
-
-      </div>
+      </header>
 
 
-      <div class="birthday">
-        Y CUMPLEAÑOS #1
-      </div>
+
+      <!-- =================================================
+           PADRES
+      ================================================== -->
+
+      <section class="familia">
+
+        <div class="familia-bloque">
+
+          <div class="titulo-con-lineas">
+
+            <span class="linea"></span>
+
+            <h3>
+              MIS PADRES
+            </h3>
+
+            <span class="linea"></span>
+
+          </div>
 
 
-      <!-- NOMBRE -->
+          <div class="padres-nombres">
 
-      <div class="name">
-        Mathías
-      </div>
+            <span>
+              Senomary Bellorin
+            </span>
+
+            <span class="separador-vertical"></span>
+
+            <span>
+              Rafael Parra
+            </span>
+
+          </div>
+
+        </div>
 
 
-      <div class="lastname">
-        PARRA BELLORIN
-      </div>
+
+        <!-- ===============================================
+             PADRINOS
+        ================================================ -->
+
+        <div class="familia-bloque padrinos-bloque">
+
+          <div class="titulo-con-lineas">
+
+            <span class="linea"></span>
+
+            <h3>
+              PADRINOS
+            </h3>
+
+            <span class="linea"></span>
+
+          </div>
 
 
-      <div class="divider"></div>
+          <div class="padrinos-grid">
+
+            <div>
+
+              <p>
+                José Luis da Silva
+              </p>
+
+              <p>
+                María Victoria Da Silva
+              </p>
+
+            </div>
+
+
+            <span
+              class="separador-vertical padrinos-separador">
+            </span>
+
+
+            <div>
+
+              <p>
+                Stefanny Calabrese
+              </p>
+
+              <p>
+                Elías Martínez
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+
+      <!-- LÍNEA COMPLETA -->
+
+      <div class="divisor-completo"></div>
+
 
 
       <!-- =================================================
            FECHA + IGLESIA
-           ================================================= -->
+      ================================================== -->
 
-      <div class="details">
+      <section class="evento">
 
 
         <!-- FECHA -->
 
-        <div>
+        <div class="fecha">
 
-          <div class="weekday">
+          <p class="dia-semana">
             SÁBADO
-          </div>
+          </p>
 
-
-          <div class="day">
+          <p class="dia-numero">
             21
-          </div>
+          </p>
 
-
-          <div class="month">
+          <p class="mes">
             de noviembre
-          </div>
+          </p>
 
-
-          <div class="year">
+          <p class="anio">
             2026
-          </div>
+          </p>
 
         </div>
 
 
-        <div class="vertical-line"></div>
+
+        <!-- SEPARADOR -->
+
+        <div class="evento-separador"></div>
+
 
 
         <!-- IGLESIA -->
 
-        <div>
+        <div class="iglesia-evento">
 
-          <div class="time">
-            2:00 PM
+          <div class="iglesia-icono">
+            ♱
           </div>
 
+          <h3 class="iglesia-nombre">
+            Iglesia de<br>
+            Desatanudos
+          </h3>
 
-          <div class="church">
-            IGLESIA DE<br>
-            SATANUDOS
-          </div>
-
-
-          <div class="church-address">
-
+          <p class="santuario">
             Santuario de la Virgen<br>
-
             de Desatanudos<br>
-
             Caracas, Miranda
+          </p>
+
+
+          <!-- HORA ABAJO DE LA IGLESIA -->
+
+          <div class="hora">
+
+            <span class="reloj"></span>
+
+            <span>
+              2:00 PM
+            </span>
 
           </div>
 
         </div>
 
+      </section>
 
-      </div>
-
-
-      <div class="divider"></div>
-
-
-      <!-- =================================================
-           PADRINOS
-           ================================================= -->
-
-      <div class="section-title">
-        PADRINOS
-      </div>
-
-
-      <div class="godparents">
-
-
-        <div>
-
-          José Luis da Silva
-
-          <br>
-
-          María Victoria Da Silva
-
-        </div>
-
-
-        <div class="godparents-line"></div>
-
-
-        <div>
-
-          Stefanny Calabrese
-
-          <br>
-
-          Elías Martínez
-
-        </div>
-
-
-      </div>
-
-
-      <div class="divider"></div>
 
 
       <!-- =================================================
            FRASE
-           ================================================= -->
+      ================================================== -->
 
-      <div class="phrase">
+      <div class="frase">
 
         La luz de Dios se enciende hoy en mi corazón
+        <br>
         para iluminar todo el camino de mi vida.
 
+        <div class="ramitas ramitas-final">
+          <span>❧</span>
+          <span>❧</span>
+        </div>
+
       </div>
-
-
-      <div class="leaves">
-        ❧ ─── ❧
-      </div>
-
 
     </section>
 
 
+
     <!-- ===================================================
          CUENTA REGRESIVA
-         =================================================== -->
+    ==================================================== -->
 
     <section class="countdown-section">
 
-
-      <div class="countdown-title">
+      <h2 class="countdown-title">
         Falta muy poquito...
-      </div>
+      </h2>
 
 
-      <div class="timer">
+      <div class="countdown">
 
-
-        <div class="time-box">
+        <div class="countdown-box">
 
           <span
-            class="number"
-            id="days"
-          >
+            class="countdown-number"
+            id="days">
             000
           </span>
 
-          <span class="label">
+          <span class="countdown-label">
             DÍAS
           </span>
 
         </div>
 
 
-        <div class="time-box">
+        <div class="countdown-box">
 
           <span
-            class="number"
-            id="hours"
-          >
+            class="countdown-number"
+            id="hours">
             00
           </span>
 
-          <span class="label">
+          <span class="countdown-label">
             HORAS
           </span>
 
         </div>
 
 
-        <div class="time-box">
+        <div class="countdown-box">
 
           <span
-            class="number"
-            id="minutes"
-          >
+            class="countdown-number"
+            id="minutes">
             00
           </span>
 
-          <span class="label">
+          <span class="countdown-label">
             MINUTOS
           </span>
 
         </div>
 
 
-        <div class="time-box">
+        <div class="countdown-box">
 
           <span
-            class="number"
-            id="seconds"
-          >
+            class="countdown-number"
+            id="seconds">
             00
           </span>
 
-          <span class="label">
+          <span class="countdown-label">
             SEGUNDOS
           </span>
 
         </div>
 
-
       </div>
-
 
     </section>
 
 
+
     <!-- ===================================================
-         GOOGLE MAPS
-         =================================================== -->
+         UBICACIÓN
+    ==================================================== -->
 
-    <section class="action-card">
+    <section class="info-card">
 
+      <div class="info-top">
 
-      <div class="action-left">
-
-
-        <div class="circle-icon">
-          ⌖
+        <div class="info-icon">
+          ⊕
         </div>
 
 
         <div>
 
-          <div class="action-small">
-            NUESTRA IGLESIA
-          </div>
+          <p class="info-small">
+            Nuestra Iglesia
+          </p>
 
-
-          <div class="action-title">
+          <h2 class="info-title">
             Iglesia Desatanudos
-          </div>
+          </h2>
 
-
-          <div class="action-description">
-
+          <p class="info-description">
             Santuario de la Virgen de Desatanudos
-
             <br>
-
             Caracas, Miranda
-
-          </div>
+          </p>
 
         </div>
-
 
       </div>
 
 
       <a
-        class="button"
+        class="boton"
         href="https://maps.app.goo.gl/6RwFHW5Ai9RnGk5L6?g_st=iw"
         target="_blank"
         rel="noopener noreferrer"
       >
-        ⌖ &nbsp; VER EN GOOGLE MAPS
+        ⊕ &nbsp; VER EN GOOGLE MAPS
       </a>
-
 
     </section>
 
 
+
     <!-- ===================================================
          WHATSAPP
-         =================================================== -->
+    ==================================================== -->
 
-    <section class="action-card whatsapp-card">
+    <section class="info-card">
 
+      <div class="info-top">
 
-      <div class="action-left">
-
-
-        <div class="circle-icon">
-          ☏
+        <div class="info-icon whatsapp">
+          ☎
         </div>
 
 
         <div>
 
-          <div class="action-small">
-            TU PRESENCIA ES IMPORTANTE
-          </div>
+          <p class="info-small">
+            Tu presencia es importante
+          </p>
 
-
-          <div class="action-title">
+          <h2 class="info-title">
             Confirma tu asistencia
-          </div>
+          </h2>
 
-
-          <div class="action-description">
-
+          <p class="info-description">
             Nos encantará contar contigo
             en este día tan especial.
-
-          </div>
+          </p>
 
         </div>
-
 
       </div>
 
 
       <a
-        class="button"
+        class="boton boton-whatsapp"
         href="https://wa.me/584148633713?text=Hola%2C%20confirmo%20mi%20asistencia%20al%20Bautizo%20y%20Cumplea%C3%B1os%20%231%20de%20Math%C3%ADas.%20%F0%9F%A4%8D"
         target="_blank"
         rel="noopener noreferrer"
       >
-        ☏ &nbsp; CONFIRMAR POR WHATSAPP
+        ☎ &nbsp; CONFIRMAR POR WHATSAPP
       </a>
-
 
     </section>
 
 
+
     <!-- ===================================================
          PIE
-         =================================================== -->
+    ==================================================== -->
 
-    <footer>
+    <footer class="footer">
 
-
-      <div class="footer-name">
+      <p class="footer-nombre">
         MATHÍAS PARRA BELLORIN
-      </div>
+      </p>
 
+      <div class="footer-linea"></div>
 
-      <div class="footer-heart">
-        ♥
-      </div>
-
-
-      <div class="footer-date">
+      <p class="footer-evento">
         BAUTIZO · 21 · XI · 2026
-      </div>
-
+      </p>
 
     </footer>
 
@@ -1704,17 +1656,18 @@
   </main>
 
 
+
   <!-- =====================================================
        CONTADOR
-       ===================================================== -->
+  ====================================================== -->
 
   <script>
 
     /*
-      Bautizo:
+      Fecha:
       21 de noviembre de 2026
       2:00 PM
-      Venezuela UTC-4
+      Venezuela = UTC -04:00
     */
 
     const eventDate =
@@ -1728,29 +1681,33 @@
       const now =
         new Date().getTime();
 
-
       const distance =
         eventDate - now;
 
 
-      /* EVENTO COMENZÓ */
+      /*
+        Si ya llegó el día del evento
+      */
 
       if (distance <= 0) {
 
-        document.getElementById("days")
+        document
+          .getElementById("days")
           .textContent = "000";
 
-        document.getElementById("hours")
+        document
+          .getElementById("hours")
           .textContent = "00";
 
-        document.getElementById("minutes")
+        document
+          .getElementById("minutes")
           .textContent = "00";
 
-        document.getElementById("seconds")
+        document
+          .getElementById("seconds")
           .textContent = "00";
 
         return;
-
       }
 
 
@@ -1799,34 +1756,33 @@
         );
 
 
-      document.getElementById("days")
+      document
+        .getElementById("days")
         .textContent =
         String(days).padStart(3, "0");
 
 
-      document.getElementById("hours")
+      document
+        .getElementById("hours")
         .textContent =
         String(hours).padStart(2, "0");
 
 
-      document.getElementById("minutes")
+      document
+        .getElementById("minutes")
         .textContent =
         String(minutes).padStart(2, "0");
 
 
-      document.getElementById("seconds")
+      document
+        .getElementById("seconds")
         .textContent =
         String(seconds).padStart(2, "0");
 
     }
 
 
-    /* MOSTRAR EL CONTADOR */
-
     updateCountdown();
-
-
-    /* ACTUALIZAR CADA SEGUNDO */
 
     setInterval(
       updateCountdown,
@@ -1835,7 +1791,5 @@
 
   </script>
 
-
 </body>
-
 </html>
