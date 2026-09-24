@@ -1,2080 +1,2286 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
+<title>Bautizo y Cumpleaños #1 de Mathías</title>
 
-  <title>Bautizo y Cumpleaños #1 de Mathías</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 
-  <!-- FUENTES -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<style>
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"
-    rel="stylesheet"
-  >
+:root {
+--navy: #2F4156;
+--teal: #567C8D;
+--sky: #C8D9E6;
+--cream: #F5EFEB;
+--white: #FFFFFF;
+--line: #8FAAB7;
+--whatsapp: #4F91A8;
+}
 
-  <style>
+* {
+box-sizing: border-box;
+}
 
-    /* =====================================================
-       COLORES
-    ===================================================== */
+html {
+scroll-behavior: smooth;
+}
 
-    :root {
-      --navy: #2F4156;
-      --teal: #567C8D;
-      --sky: #C8D9E6;
-      --cream: #F5EFEB;
-      --white: #FFFFFF;
-      --line: #9CB4C0;
-    }
+body {
+margin: 0;
+min-height: 100vh;
+overflow-x: hidden;
 
+font-family: "Cormorant Garamond", serif;
+color: var(--navy);
 
-    /* =====================================================
-       GENERAL
-    ===================================================== */
+background:
+linear-gradient(
+rgba(255,255,255,.05),
+rgba(255,255,255,.05)
+),
+url("fondo-bautizo.png");
 
-    * {
-      box-sizing: border-box;
-    }
+background-size: cover;
+background-position: center top;
+background-repeat: repeat-y;
+}
 
-    html {
-      scroll-behavior: smooth;
-    }
 
-    body {
-      margin: 0;
+/* ==========================================
+PÁGINA
+========================================== */
 
-      font-family: "Cormorant Garamond", serif;
+.pagina {
+position: relative;
 
-      color: var(--navy);
+width: min(92%, 720px);
 
-      background:
-        linear-gradient(
-          rgba(255,255,255,0.04),
-          rgba(255,255,255,0.04)
-        ),
-        url("fondo-bautizo.png");
+margin: 0 auto;
 
-      background-size: cover;
-      background-position: center top;
-      background-repeat: repeat-y;
-      background-attachment: fixed;
+padding: 55px 0 65px;
+}
 
-      min-height: 100vh;
-    }
 
+/* ==========================================
+GLOBOS
+========================================== */
 
-    /* =====================================================
-       PÁGINA
-    ===================================================== */
+.globo {
+position: absolute;
 
-    .pagina {
-      width: min(94%, 760px);
+z-index: 1;
 
-      margin: 0 auto;
+pointer-events: none;
 
-      padding: 40px 0 70px;
-    }
+opacity: .90;
+}
 
+.globo-izq {
+width: 112px;
 
-    /* =====================================================
-       TARJETA PRINCIPAL
-    ===================================================== */
+left: -78px;
+top: 510px;
 
-    .invitacion {
-      position: relative;
+transform: rotate(-5deg);
+}
 
-      width: 100%;
+.globo-der {
+width: 105px;
 
-      margin: 0 auto;
+right: -72px;
+top: 930px;
 
-      padding:
-        85px
-        55px
-        45px;
+transform: rotate(5deg);
+}
 
-      background: rgba(250, 247, 242, 0.96);
+.globo-pequeno {
+width: 70px;
 
-      border: 3px solid rgba(86, 124, 141, 0.55);
+right: -20px;
+top: 1350px;
 
-      border-radius:
-        90px
-        90px
-        45px
-        45px;
+opacity: .75;
+}
 
-      box-shadow:
-        0 12px 35px
-        rgba(47, 65, 86, 0.16);
 
-      overflow: visible;
-    }
+/* ==========================================
+INVITACIÓN PRINCIPAL
+========================================== */
 
+.invitacion {
+position: relative;
 
-    /* BORDE INTERIOR */
+z-index: 2;
 
-    .invitacion::before {
-      content: "";
+width: 100%;
 
-      position: absolute;
+padding:
+82px
+48px
+42px;
 
-      top: 18px;
-      left: 18px;
-      right: 18px;
-      bottom: 18px;
+background:
+rgba(250,247,242,.96);
 
-      border:
-        1.5px solid
-        rgba(86, 124, 141, 0.55);
+border:
+3px solid
+rgba(86,124,141,.55);
 
-      border-radius:
-        72px
-        72px
-        34px
-        34px;
+border-radius:
+90px
+90px
+45px
+45px;
 
-      pointer-events: none;
-    }
+box-shadow:
+0 14px 35px
+rgba(47,65,86,.16);
+}
 
 
-    /* =====================================================
-       MEDALLÓN
-    ===================================================== */
+.invitacion::before {
+content: "";
 
-    .medallon {
-      position: absolute;
+position: absolute;
 
-      width: 125px;
-      height: 125px;
+top: 17px;
+left: 17px;
+right: 17px;
+bottom: 17px;
 
-      left: -36px;
-      top: 205px;
+border:
+1.5px solid
+rgba(86,124,141,.55);
 
-      border-radius: 50%;
+border-radius:
+73px
+73px
+33px
+33px;
 
-      background: #f7f1e9;
+pointer-events: none;
+}
 
-      border:
-        1px solid
-        rgba(86, 124, 141, 0.25);
 
-      box-shadow:
-        0 7px 18px
-        rgba(47, 65, 86, 0.13);
+/* ==========================================
+MEDALLÓN / CRUZ
+========================================== */
 
-      display: flex;
+.medallon-cruz {
+position: absolute;
 
-      align-items: center;
-      justify-content: center;
+width: 125px;
+height: 125px;
 
-      z-index: 5;
-    }
+left: -43px;
+top: 200px;
 
-    .medallon::before {
-      content: "";
+z-index: 10;
 
-      position: absolute;
+pointer-events: none;
+}
 
-      width: 94px;
-      height: 94px;
+.medallon-cruz img {
+display: block;
 
-      border-radius: 50%;
+width: 100%;
+height: 100%;
 
-      border:
-        1px solid
-        #9db3bd;
-    }
+object-fit: contain;
 
+filter:
+drop-shadow(
+0 7px 8px
+rgba(47,65,86,.14)
+);
+}
 
-    /* =====================================================
-       CRUZ
-    ===================================================== */
 
-    .cruz {
-      position: relative;
+/* ==========================================
+ENCABEZADO
+========================================== */
 
-      width: 26px;
-      height: 62px;
+.encabezado {
+position: relative;
 
-      background:
-        linear-gradient(
-          180deg,
-          #6f98aa,
-          #3f6679
-        );
+z-index: 2;
 
-      border-radius: 10px;
-    }
+text-align: center;
+}
 
-    .cruz::before {
-      content: "";
+.intro {
+margin: 0 0 8px;
 
-      position: absolute;
+font-size: 17px;
 
-      width: 58px;
-      height: 24px;
+font-weight: 500;
 
-      left: 50%;
-      top: 18px;
+letter-spacing: 5px;
 
-      transform:
-        translateX(-50%);
+text-transform: uppercase;
+}
 
-      background:
-        linear-gradient(
-          90deg,
-          #6f98aa,
-          #3f6679
-        );
+.bautizo {
+margin: 0;
 
-      border-radius: 10px;
-    }
+font-size: 47px;
 
-    .cruz::after {
-      content: "✦";
+font-weight: 500;
 
-      position: absolute;
+letter-spacing: 9px;
+}
 
-      color: white;
+.cumple {
+margin: 9px 0 0;
 
-      font-size: 9px;
+font-size: 22px;
 
-      top: 24px;
-      left: 50%;
+font-weight: 500;
 
-      transform:
-        translateX(-50%);
-    }
+letter-spacing: 5px;
+}
 
+.linea-cumple {
+width: 55%;
 
-    /* =====================================================
-       ENCABEZADO
-    ===================================================== */
+height: 1px;
 
-    .encabezado {
-      position: relative;
+margin:
+16px
+auto
+18px;
 
-      z-index: 2;
+background: var(--line);
+}
 
-      text-align: center;
-    }
 
+/* ==========================================
+NOMBRE
+========================================== */
 
-    /* TE INVITO A CELEBRAR MI */
+.nombre {
+margin: 0;
 
-    .invitacion-texto {
-      margin:
-        0
-        0
-        8px;
+font-family:
+"Allura",
+cursive;
 
-      font-size: 19px;
+font-size: 100px;
 
-      letter-spacing: 7px;
+font-weight: 400;
 
-      text-transform: uppercase;
+line-height: .95;
 
-      font-weight: 500;
-    }
+color: #29465e;
+}
 
+.apellido {
+margin: 4px 0 0;
 
-    /* BAUTIZO */
+font-size: 23px;
 
-    .bautizo {
-      margin: 0;
+font-weight: 500;
 
-      font-size: 48px;
+letter-spacing: 7px;
+}
 
-      letter-spacing: 9px;
 
-      font-weight: 500;
-    }
+/* ==========================================
+ADORNOS
+========================================== */
 
+.adorno {
+width: 100px;
 
-    /* CUMPLEAÑOS */
+margin:
+20px
+auto
+16px;
 
-    .cumple {
-      margin:
-        12px
-        0
-        0;
+display: flex;
 
-      font-size: 24px;
+align-items: center;
+justify-content: center;
 
-      letter-spacing: 6px;
+gap: 8px;
+}
 
-      font-weight: 500;
-    }
+.adorno::before,
+.adorno::after {
+content: "❧";
 
+color: #7895a1;
 
-    /* LÍNEA DEBAJO DE CUMPLEAÑOS */
+font-size: 24px;
+}
 
-    .linea-cumple {
-      width: 52%;
+.adorno::after {
+transform: scaleX(-1);
+}
 
-      height: 1.5px;
 
-      margin:
-        16px
-        auto
-        22px;
+/* ==========================================
+FAMILIA
+========================================== */
 
-      background:
-        #7da1b2;
-    }
+.familia {
+position: relative;
 
+z-index: 2;
 
-    /* =====================================================
-       NOMBRE
-    ===================================================== */
+width: 92%;
 
-    .nombre {
-      margin:
-        5px
-        0
-        -2px;
+margin: 5px auto 0;
 
-      font-family:
-        "Allura",
-        cursive;
+text-align: center;
+}
 
-      font-size: 105px;
+.familia-bloque {
+margin: 0 0 27px;
+}
 
-      line-height: 1;
+.titulo-lineas {
+display: flex;
 
-      font-weight: 400;
+align-items: center;
+justify-content: center;
 
-      color: #29445d;
-    }
+width: 100%;
 
-    .apellido {
-      margin: 0;
+gap: 18px;
 
-      font-size: 26px;
+margin-bottom: 12px;
+}
 
-      letter-spacing: 8px;
+.titulo-lineas::before,
+.titulo-lineas::after {
+content: "";
 
-      font-weight: 500;
-    }
+flex: 1;
 
+height: 1px;
 
-    /* =====================================================
-       RAMITAS
-    ===================================================== */
+background: var(--line);
+}
 
-    .ramitas {
-      display: flex;
+.titulo-lineas h3 {
+margin: 0;
 
-      justify-content: center;
-      align-items: center;
+white-space: nowrap;
 
-      gap: 28px;
+font-size: 20px;
 
-      margin:
-        22px
-        auto
-        16px;
+font-weight: 500;
 
-      color: #7895a1;
+letter-spacing: 6px;
+}
 
-      font-size: 26px;
-    }
 
-    .ramitas span:first-child {
-      transform: rotate(8deg);
-    }
+/* ==========================================
+PADRES
+========================================== */
 
-    .ramitas span:last-child {
-      transform:
-        scaleX(-1)
-        rotate(8deg);
-    }
+.padres {
+display: grid;
 
+grid-template-columns:
+1fr
+1px
+1fr;
 
-    /* =====================================================
-       PADRES Y PADRINOS
-    ===================================================== */
+align-items: center;
 
-    .familia {
-      position: relative;
+gap: 22px;
 
-      z-index: 2;
+font-size: 22px;
+}
 
-      width: 92%;
 
-      margin:
-        15px
-        auto
-        25px;
+/* ==========================================
+PADRINOS
+========================================== */
 
-      text-align: center;
-    }
+.padrinos {
+display: grid;
 
-    .familia-bloque {
-      width: 100%;
+grid-template-columns:
+1fr
+1px
+1fr;
 
-      margin:
-        0
-        auto
-        28px;
-    }
+align-items: center;
 
+gap: 22px;
 
-    /* TÍTULOS CON LÍNEAS */
+font-size: 20px;
+}
 
-    .titulo-con-lineas {
-      width: 100%;
+.padrinos p {
+margin: 3px 0;
+}
 
-      display: flex;
+.vertical {
+width: 1px;
 
-      align-items: center;
-      justify-content: center;
+height: 40px;
 
-      gap: 22px;
+background: var(--line);
+}
 
-      margin-bottom: 13px;
-    }
+.padrinos .vertical {
+height: 58px;
+}
 
-    .titulo-con-lineas h3 {
-      margin: 0;
 
-      white-space: nowrap;
+/* ==========================================
+DIVISOR
+========================================== */
 
-      font-size: 23px;
+.divisor {
+width: 92%;
 
-      letter-spacing: 7px;
+height: 1px;
 
-      font-weight: 500;
-    }
+margin: 28px auto;
 
-    .titulo-con-lineas .linea {
-      flex: 1;
+background: #7899a8;
+}
 
-      height: 1.5px;
 
-      background:
-        #7f9eac;
-    }
+/* ==========================================
+FECHA + IGLESIA
+========================================== */
 
+.evento {
+position: relative;
 
-    /* =====================================================
-       MIS PADRES
-    ===================================================== */
+z-index: 2;
 
-    .padres-nombres {
-      display: flex;
+width: 92%;
 
-      justify-content: center;
-      align-items: center;
+margin: 0 auto;
 
-      gap: 24px;
+display: grid;
 
-      font-size: 24px;
-    }
+grid-template-columns:
+minmax(0,1fr)
+1px
+minmax(0,1fr);
 
-    .separador-vertical {
-      display: block;
+gap: 25px;
 
-      width: 1px;
-      height: 42px;
+align-items: center;
 
-      background:
-        #8eacb8;
-    }
+text-align: center;
+}
 
+.evento-separador {
+width: 1px;
 
-    /* =====================================================
-       PADRINOS
-    ===================================================== */
+height: 180px;
 
-    .padrinos-bloque {
-      margin-top: 30px;
-    }
+background: var(--line);
+}
 
-    .padrinos-grid {
-      display: grid;
 
-      grid-template-columns:
-        1fr
-        auto
-        1fr;
+/* FECHA */
 
-      align-items: center;
+.dia-semana {
+margin: 0;
 
-      gap: 28px;
+font-size: 20px;
 
-      font-size: 23px;
-    }
+letter-spacing: 5px;
+}
 
-    .padrinos-grid p {
-      margin:
-        3px
-        0;
-    }
+.dia {
+margin:
+3px
+0
+-2px;
 
-    .padrinos-separador {
-      height: 62px;
-    }
+font-size: 64px;
 
+font-weight: 500;
 
-    /* =====================================================
-       LÍNEA COMPLETA
-    ===================================================== */
+line-height: 1;
+}
 
-    .divisor-completo {
-      width: 92%;
+.mes {
+margin: 0;
 
-      height: 1.5px;
+font-family:
+"Allura",
+cursive;
 
-      margin:
-        28px
-        auto
-        30px;
+font-size: 44px;
 
-      background:
-        #7899a8;
-    }
+line-height: 1;
 
+white-space: nowrap;
+}
 
-    /* =====================================================
-       FECHA + IGLESIA
-    ===================================================== */
+.anio {
+margin: 9px 0 0;
 
-    .evento {
-      position: relative;
+font-size: 18px;
 
-      z-index: 2;
+letter-spacing: 6px;
+}
 
-      width: 92%;
 
-      margin: auto;
+/* ==========================================
+LOGO DE IGLESIA
+========================================== */
 
-      display: grid;
+.iglesia-logo {
+width: 48px;
+height: 48px;
 
-      grid-template-columns:
-        1fr
-        1px
-        1fr;
+margin:
+0
+auto
+6px;
 
-      gap: 30px;
+color: #315E78;
+}
 
-      align-items: center;
+.iglesia-logo svg {
+display: block;
 
-      text-align: center;
-    }
+width: 100%;
+height: 100%;
+}
 
 
-    /* SEPARADOR CENTRAL */
+.iglesia-nombre {
+margin: 0;
 
-    .evento-separador {
-      width: 1px;
+font-size: 22px;
 
-      height: 190px;
+font-weight: 500;
 
-      background:
-        #9bb5c0;
-    }
+letter-spacing: 2px;
 
+line-height: 1.05;
 
-    /* =====================================================
-       FECHA
-    ===================================================== */
+text-transform: uppercase;
+}
 
-    .dia-semana {
-      margin: 0;
+.santuario {
+margin:
+8px
+0
+10px;
 
-      font-size: 22px;
+font-size: 17px;
 
-      letter-spacing: 6px;
-    }
+line-height: 1.2;
+}
 
-    .dia-numero {
-      margin:
-        3px
-        0
-        -4px;
 
-      font-size: 67px;
+/* ==========================================
+HORA
+========================================== */
 
-      line-height: 1;
+.hora {
+display: flex;
 
-      font-weight: 500;
-    }
+justify-content: center;
+align-items: center;
 
-    .mes {
-      margin:
-        4px
-        0;
+gap: 8px;
 
-      font-family:
-        "Allura",
-        cursive;
+margin-top: 9px;
 
-      font-size: 48px;
+font-size: 24px;
 
-      line-height: 1;
-    }
+font-weight: 500;
+}
 
-    .anio {
-      margin:
-        8px
-        0
-        0;
+.reloj {
+position: relative;
 
-      font-size: 20px;
+width: 32px;
+height: 32px;
 
-      letter-spacing: 7px;
-    }
+border:
+1.8px solid
+var(--navy);
 
+border-radius: 50%;
+}
 
-    /* =====================================================
-       IGLESIA
-    ===================================================== */
+.reloj::before {
+content: "";
 
-    .iglesia-icono {
-      margin-bottom: 5px;
+position: absolute;
 
-      font-size: 42px;
-    }
+width: 1.5px;
+height: 8px;
 
-    .iglesia-nombre {
-      margin: 0;
+left: 14px;
+top: 6px;
 
-      font-size: 26px;
+background: var(--navy);
+}
 
-      letter-spacing: 3px;
+.reloj::after {
+content: "";
 
-      line-height: 1.05;
+position: absolute;
 
-      text-transform: uppercase;
-    }
+width: 7px;
+height: 1.5px;
 
-    .santuario {
-      margin:
-        8px
-        0
-        12px;
+left: 14px;
+top: 14px;
 
-      font-size: 20px;
+background: var(--navy);
 
-      line-height: 1.15;
-    }
+transform: rotate(28deg);
 
+transform-origin: left center;
+}
 
-    /* HORA */
 
-    .hora {
-      display: flex;
+/* ==========================================
+FRASE
+========================================== */
 
-      justify-content: center;
-      align-items: center;
+.frase {
+position: relative;
 
-      gap: 10px;
+z-index: 2;
 
-      margin-top: 10px;
+width: 92%;
 
-      font-size: 28px;
+margin:
+27px
+auto
+0;
 
-      font-weight: 500;
-    }
+padding-top: 23px;
 
+border-top:
+1px solid
+#7899a8;
 
-    /* RELOJ */
+text-align: center;
 
-    .reloj {
-      position: relative;
+font-size: 22px;
 
-      width: 38px;
-      height: 38px;
+font-style: italic;
 
-      border:
-        2px solid
-        var(--navy);
+line-height: 1.4;
+}
 
-      border-radius: 50%;
-    }
 
-    .reloj::before {
-      content: "";
+/* ==========================================
+CONTADOR
+========================================== */
 
-      position: absolute;
+.contador-seccion {
+position: relative;
 
-      width: 2px;
-      height: 10px;
+z-index: 2;
 
-      left: 17px;
-      top: 7px;
+padding:
+22px
+0
+5px;
 
-      background:
-        var(--navy);
-    }
+text-align: center;
+}
 
-    .reloj::after {
-      content: "";
+.contador-titulo {
+margin:
+0
+0
+15px;
 
-      position: absolute;
+font-family:
+"Allura",
+cursive;
 
-      width: 9px;
-      height: 2px;
+font-size: 58px;
 
-      left: 17px;
-      top: 16px;
+font-weight: 400;
 
-      background:
-        var(--navy);
+color: #29465e;
+}
 
-      transform:
-        rotate(30deg);
+.contador {
+display: grid;
 
-      transform-origin:
-        left center;
-    }
+grid-template-columns:
+repeat(4,1fr);
 
+gap: 10px;
+}
 
-    /* =====================================================
-       FRASE
-    ===================================================== */
+.contador-caja {
+min-height: 105px;
 
-    .frase {
-      position: relative;
+display: flex;
 
-      z-index: 2;
+flex-direction: column;
 
-      width: 92%;
+align-items: center;
+justify-content: center;
 
-      margin:
-        28px
-        auto
-        0;
+border-radius: 20px;
 
-      padding-top: 24px;
+color: white;
 
-      border-top:
-        1.5px solid
-        #7899a8;
+background:
+linear-gradient(
+145deg,
+#31576b,
+#567C8D
+);
 
-      text-align: center;
+box-shadow:
+0 8px 18px
+rgba(47,65,86,.13);
+}
 
-      font-size: 25px;
+.numero {
+font-size: 40px;
 
-      line-height: 1.35;
+line-height: 1;
+}
 
-      font-style: italic;
-    }
+.etiqueta {
+margin-top: 8px;
 
-    .ramitas-final {
-      margin-top: 22px;
-      margin-bottom: 0;
-    }
+font-size: 11px;
 
+letter-spacing: 2px;
+}
 
-    /* =====================================================
-       CUENTA REGRESIVA
-    ===================================================== */
 
-    .countdown-section {
-      text-align: center;
+/* ==========================================
+TARJETAS INFERIORES
+========================================== */
 
-      padding:
-        20px
-        0
-        10px;
-    }
+.info {
+position: relative;
 
-    .countdown-title {
-      margin:
-        0
-        0
-        15px;
+z-index: 2;
 
-      font-family:
-        "Allura",
-        cursive;
+margin-top: 24px;
 
-      font-size: 60px;
+padding: 28px;
 
-      font-weight: 400;
+border-radius: 32px;
 
-      color: #29445d;
-    }
+background:
+rgba(255,255,255,.94);
 
-    .countdown {
-      display: grid;
+box-shadow:
+0 9px 24px
+rgba(47,65,86,.12);
+}
 
-      grid-template-columns:
-        repeat(4, 1fr);
+.info-arriba {
+display: grid;
 
-      gap: 12px;
-    }
+grid-template-columns:
+75px
+1fr;
 
-    .countdown-box {
-      min-height: 110px;
+gap: 18px;
 
-      border-radius: 22px;
+align-items: center;
+}
 
-      background:
-        linear-gradient(
-          145deg,
-          #31576b,
-          #567C8D
-        );
 
-      color: white;
+/* ==========================================
+CÍRCULOS DE ICONOS
+========================================== */
 
-      display: flex;
+.icono {
+width: 70px;
+height: 70px;
 
-      flex-direction: column;
+display: flex;
 
-      align-items: center;
-      justify-content: center;
+align-items: center;
+justify-content: center;
 
-      box-shadow:
-        0 8px 18px
-        rgba(47, 65, 86, 0.13);
-    }
+border-radius: 50%;
 
-    .countdown-number {
-      font-size: 42px;
+background: var(--navy);
 
-      line-height: 1;
-    }
+color: white;
+}
 
-    .countdown-label {
-      margin-top: 8px;
+.icono svg {
+display: block;
 
-      font-size: 12px;
+width: 37px;
+height: 37px;
+}
 
-      letter-spacing: 3px;
-    }
 
+/* ==========================================
+LOGO WHATSAPP
+MISMO COLOR DEL BOTÓN
+========================================== */
 
-    /* =====================================================
-       TARJETAS INFERIORES
-    ===================================================== */
+.icono-whatsapp {
+background:
+linear-gradient(
+90deg,
+#4e7f91,
+#74a3b3
+);
+}
 
-    .info-card {
-      margin-top: 25px;
+.icono-whatsapp svg {
+width: 40px;
+height: 40px;
+}
 
-      padding: 30px;
 
-      background:
-        rgba(255,255,255,0.93);
+.info-pequeno {
+margin: 0;
 
-      border-radius: 35px;
+font-size: 13px;
 
-      box-shadow:
-        0 9px 25px
-        rgba(47, 65, 86, 0.12);
-    }
+letter-spacing: 5px;
 
-    .info-top {
-      display: grid;
+text-transform: uppercase;
+}
 
-      grid-template-columns:
-        90px
-        1fr;
+.info h2 {
+margin: 2px 0;
 
-      gap: 20px;
+font-size: 29px;
 
-      align-items: center;
-    }
+font-weight: 500;
 
-    .info-icon {
-      width: 78px;
-      height: 78px;
+line-height: 1;
+}
 
-      border-radius: 50%;
+.info-descripcion {
+margin: 5px 0 0;
 
-      display: flex;
+font-size: 17px;
 
-      align-items: center;
-      justify-content: center;
+line-height: 1.2;
+}
 
-      background:
-        var(--navy);
 
-      color: white;
+/* ==========================================
+BOTONES
+========================================== */
 
-      font-size: 34px;
-    }
+.boton {
+display: block;
 
-    .info-icon.whatsapp {
-      background:
-        var(--teal);
-    }
+width: 100%;
 
-    .info-small {
-      margin: 0;
+margin-top: 20px;
 
-      font-size: 16px;
+padding:
+18px
+15px;
 
-      letter-spacing: 6px;
+border-radius: 35px;
 
-      text-transform: uppercase;
-    }
+color: white;
 
-    .info-title {
-      margin:
-        2px
-        0;
+text-align: center;
 
-      font-size: 31px;
+text-decoration: none;
 
-      line-height: 1;
-    }
+text-transform: uppercase;
 
-    .info-description {
-      margin:
-        4px
-        0
-        0;
+font-size: 15px;
 
-      font-size: 19px;
+letter-spacing: 4px;
 
-      line-height: 1.15;
-    }
+background:
+linear-gradient(
+90deg,
+#294b62,
+#426f88
+);
+}
 
+.boton-whatsapp {
+background:
+linear-gradient(
+90deg,
+#4e7f91,
+#74a3b3
+);
+}
 
-    /* =====================================================
-       BOTONES
-    ===================================================== */
 
-    .boton {
-      display: block;
+/* ==========================================
+FOOTER
+========================================== */
 
-      width: 100%;
+footer {
+position: relative;
 
-      margin-top: 22px;
+z-index: 2;
 
-      padding:
-        21px
-        20px;
+padding:
+42px
+10px
+5px;
 
-      border-radius: 40px;
+text-align: center;
+}
 
-      text-align: center;
+.footer-nombre {
+margin: 0;
 
-      text-decoration: none;
+font-size: 16px;
 
-      text-transform: uppercase;
+letter-spacing: 6px;
+}
 
-      font-family:
-        "Cormorant Garamond",
-        serif;
+.footer-linea {
+width: 60px;
 
-      font-size: 17px;
+height: 1px;
 
-      letter-spacing: 5px;
+margin: 13px auto;
 
-      color: white;
+background: var(--navy);
+}
 
-      background:
-        linear-gradient(
-          90deg,
-          #294b62,
-          #426f88
-        );
+.footer-evento {
+margin: 0;
 
-      transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease;
-    }
+font-size: 11px;
 
-    .boton:hover {
-      transform:
-        translateY(-2px);
+letter-spacing: 5px;
+}
 
-      box-shadow:
-        0 7px 16px
-        rgba(47, 65, 86, 0.2);
-    }
 
-    .boton-whatsapp {
-      background:
-        linear-gradient(
-          90deg,
-          #4e7f91,
-          #74a3b3
-        );
-    }
+/* ==========================================
+MÓVIL
+========================================== */
 
+@media (max-width: 650px) {
 
-    /* =====================================================
-       FOOTER
-    ===================================================== */
+body {
+background-size: auto 100%;
+background-position: center top;
+background-attachment: scroll;
+}
 
-    .footer {
-      padding:
-        45px
-        10px
-        10px;
+.pagina {
+width: 100%;
 
-      text-align: center;
-    }
+padding:
+30px
+29px
+50px;
+}
 
-    .footer-nombre {
-      margin: 0;
 
-      font-size: 19px;
+/* GLOBOS */
 
-      letter-spacing: 7px;
-    }
+.globo-izq {
+width: 82px;
 
-    .footer-linea {
-      width: 60px;
+left: -13px;
+top: 500px;
+}
 
-      height: 1px;
+.globo-der {
+width: 76px;
 
-      margin:
-        14px
-        auto;
+right: -10px;
+top: 1020px;
+}
 
-      background:
-        var(--navy);
-    }
+.globo-pequeno {
+width: 54px;
 
-    .footer-evento {
-      margin: 0;
+right: 0;
+top: 1440px;
+}
 
-      font-size: 13px;
 
-      letter-spacing: 6px;
-    }
+/* TARJETA */
 
+.invitacion {
+padding:
+72px
+21px
+34px;
 
-    /* =====================================================
-       TELÉFONO
-    ===================================================== */
+border-radius:
+62px
+62px
+35px
+35px;
+}
 
-    @media (max-width: 650px) {
+.invitacion::before {
+top: 13px;
+left: 13px;
+right: 13px;
+bottom: 13px;
 
-      /*
-        IMPORTANTE:
-        dejamos más espacio a los lados para que
-        se pueda ver el fondo y los globos.
-      */
+border-radius:
+50px
+50px
+27px
+27px;
+}
 
-      body {
-        background-size: auto 100%;
-        background-position: center top;
-        background-repeat: repeat-y;
-        background-attachment: scroll;
-      }
 
+/* CRUZ */
 
-      .pagina {
-        width: 100%;
+.medallon-cruz {
+width: 100px;
+height: 100px;
 
-        padding:
-          25px
-          34px
-          50px;
-      }
+left: -31px;
+top: 188px;
+}
 
 
-      .invitacion {
-        width: 100%;
+/* ENCABEZADO */
 
-        margin:
-          0
-          auto;
+.intro {
+font-size: 11px;
 
-        padding:
-          75px
-          22px
-          35px;
+letter-spacing: 3px;
+}
 
-        border-radius:
-          65px
-          65px
-          38px
-          38px;
-      }
+.bautizo {
+font-size: 34px;
 
+letter-spacing: 6px;
+}
 
-      .invitacion::before {
-        top: 14px;
-        left: 14px;
-        right: 14px;
-        bottom: 14px;
+.cumple {
+font-size: 16px;
 
-        border-radius:
-          52px
-          52px
-          29px
-          29px;
-      }
+letter-spacing: 3px;
+}
 
+.linea-cumple {
+width: 58%;
+}
 
-      /* MEDALLÓN */
+.nombre {
+font-size: 73px;
+}
 
-      .medallon {
-        width: 100px;
-        height: 100px;
+.apellido {
+font-size: 15px;
 
-        left: -27px;
-        top: 205px;
-      }
+letter-spacing: 4px;
+}
 
-      .medallon::before {
-        width: 76px;
-        height: 76px;
-      }
 
-      .cruz {
-        transform:
-          scale(0.8);
-      }
+/* FAMILIA */
 
+.familia {
+width: 93%;
+}
 
-      /* ENCABEZADO */
+.titulo-lineas {
+gap: 9px;
+}
 
-      .invitacion-texto {
-        font-size: 13px;
+.titulo-lineas h3 {
+font-size: 14px;
 
-        letter-spacing: 4px;
-      }
+letter-spacing: 3px;
+}
 
-      .bautizo {
-        font-size: 37px;
+.padres {
+gap: 10px;
 
-        letter-spacing: 7px;
-      }
+font-size: 15px;
+}
 
-      .cumple {
-        font-size: 18px;
+.padrinos {
+gap: 9px;
 
-        letter-spacing: 4px;
-      }
+font-size: 14px;
+}
 
-      .linea-cumple {
-        width: 60%;
-      }
+.vertical {
+height: 34px;
+}
 
-      .nombre {
-        font-size: 79px;
-      }
+.padrinos .vertical {
+height: 51px;
+}
 
-      .apellido {
-        font-size: 18px;
 
-        letter-spacing: 5px;
-      }
+/* EVENTO */
 
+.evento {
+width: 94%;
 
-      /* PADRES Y PADRINOS */
+gap: 9px;
+}
 
-      .familia {
-        width: 92%;
-      }
+.evento-separador {
+height: 155px;
+}
 
-      .titulo-con-lineas {
-        gap: 11px;
-      }
+.dia-semana {
+font-size: 13px;
 
-      .titulo-con-lineas h3 {
-        font-size: 16px;
+letter-spacing: 3px;
+}
 
-        letter-spacing: 4px;
-      }
+.dia {
+font-size: 49px;
+}
 
-      .padres-nombres {
-        gap: 12px;
+.mes {
+font-size: 33px;
+}
 
-        font-size: 17px;
-      }
+.anio {
+font-size: 12px;
 
-      .separador-vertical {
-        height: 35px;
-      }
+letter-spacing: 4px;
+}
 
-      .padrinos-grid {
-        gap: 11px;
 
-        font-size: 16px;
-      }
+/* IGLESIA MÁS PEQUEÑA */
 
-      .padrinos-separador {
-        height: 55px;
-      }
+.iglesia-logo {
+width: 35px;
+height: 35px;
 
+margin-bottom: 4px;
+}
 
-      /* EVENTO */
+.iglesia-nombre {
+font-size: 15px;
 
-      .evento {
-        width: 94%;
+letter-spacing: 1px;
+}
 
-        gap: 13px;
-      }
+.santuario {
+font-size: 12px;
+}
 
-      .evento-separador {
-        height: 170px;
-      }
+.hora {
+font-size: 18px;
+}
 
-      .dia-semana {
-        font-size: 15px;
+.reloj {
+width: 27px;
+height: 27px;
+}
 
-        letter-spacing: 4px;
-      }
+.reloj::before {
+left: 12px;
+top: 5px;
+}
 
-      .dia-numero {
-        font-size: 53px;
-      }
+.reloj::after {
+left: 12px;
+top: 12px;
+}
 
-      .mes {
-        font-size: 39px;
-      }
 
-      .anio {
-        font-size: 14px;
+/* FRASE */
 
-        letter-spacing: 5px;
-      }
+.frase {
+font-size: 17px;
+}
 
-      .iglesia-icono {
-        font-size: 33px;
-      }
 
-      .iglesia-nombre {
-        font-size: 18px;
+/* CONTADOR */
 
-        letter-spacing: 2px;
-      }
+.contador-titulo {
+font-size: 45px;
+}
 
-      .santuario {
-        font-size: 15px;
-      }
+.contador {
+gap: 6px;
+}
 
-      .hora {
-        font-size: 21px;
-      }
+.contador-caja {
+min-height: 82px;
 
-      .reloj {
-        width: 31px;
-        height: 31px;
-      }
+border-radius: 16px;
+}
 
-      .reloj::before {
-        left: 13px;
-        top: 5px;
-      }
+.numero {
+font-size: 28px;
+}
 
-      .reloj::after {
-        left: 13px;
-        top: 14px;
-      }
+.etiqueta {
+font-size: 8px;
 
+letter-spacing: 1px;
+}
 
-      /* FRASE */
 
-      .frase {
-        font-size: 19px;
-      }
+/* TARJETAS */
 
+.info {
+padding: 21px;
 
-      /* CONTADOR */
+border-radius: 25px;
+}
 
-      .countdown-title {
-        font-size: 47px;
-      }
+.info-arriba {
+grid-template-columns:
+57px
+1fr;
 
-      .countdown {
-        gap: 7px;
-      }
+gap: 12px;
+}
 
-      .countdown-box {
-        min-height: 88px;
+.icono {
+width: 54px;
+height: 54px;
+}
 
-        border-radius: 17px;
-      }
+.icono svg {
+width: 29px;
+height: 29px;
+}
 
-      .countdown-number {
-        font-size: 30px;
-      }
+.icono-whatsapp svg {
+width: 32px;
+height: 32px;
+}
 
-      .countdown-label {
-        font-size: 9px;
+.info-pequeno {
+font-size: 9px;
 
-        letter-spacing: 1.5px;
-      }
+letter-spacing: 3px;
+}
 
+.info h2 {
+font-size: 21px;
+}
 
-      /* TARJETAS */
+.info-descripcion {
+font-size: 13px;
+}
 
-      .info-card {
-        padding: 22px;
+.boton {
+padding:
+15px
+10px;
 
-        border-radius: 27px;
-      }
+font-size: 11px;
 
-      .info-top {
-        grid-template-columns:
-          65px
-          1fr;
+letter-spacing: 2px;
+}
 
-        gap: 14px;
-      }
 
-      .info-icon {
-        width: 60px;
-        height: 60px;
+/* FOOTER */
 
-        font-size: 26px;
-      }
+.footer-nombre {
+font-size: 12px;
 
-      .info-small {
-        font-size: 11px;
+letter-spacing: 4px;
+}
 
-        letter-spacing: 4px;
-      }
+.footer-evento {
+font-size: 9px;
 
-      .info-title {
-        font-size: 24px;
-      }
+letter-spacing: 3px;
+}
 
-      .info-description {
-        font-size: 15px;
-      }
+}
 
-      .boton {
-        padding:
-          17px
-          12px;
 
-        font-size: 13px;
+@media (max-width: 390px) {
 
-        letter-spacing: 3px;
-      }
+.pagina {
+padding-left: 25px;
+padding-right: 25px;
+}
 
+.medallon-cruz {
+width: 94px;
+height: 94px;
 
-      /* FOOTER */
+left: -29px;
+}
 
-      .footer-nombre {
-        font-size: 14px;
+.nombre {
+font-size: 66px;
+}
 
-        letter-spacing: 5px;
-      }
+.padres {
+font-size: 13px;
+}
 
-      .footer-evento {
-        font-size: 10px;
+.padrinos {
+font-size: 12px;
+}
 
-        letter-spacing: 4px;
-      }
+.mes {
+font-size: 29px;
+}
 
-    }
+.iglesia-logo {
+width: 31px;
+height: 31px;
+}
 
+.iglesia-nombre {
+font-size: 13px;
+}
 
-    /* =====================================================
-       TELÉFONOS MUY PEQUEÑOS
-    ===================================================== */
+.santuario {
+font-size: 11px;
+}
 
-    @media (max-width: 390px) {
+}
 
-      .pagina {
-        padding-left: 28px;
-        padding-right: 28px;
-      }
-
-      .nombre {
-        font-size: 69px;
-      }
-
-      .padres-nombres {
-        font-size: 15px;
-      }
-
-      .padrinos-grid {
-        font-size: 14px;
-      }
-
-      .evento {
-        gap: 8px;
-      }
-
-      .iglesia-nombre {
-        font-size: 16px;
-      }
-
-      .santuario {
-        font-size: 13px;
-      }
-
-      .hora {
-        font-size: 18px;
-      }
-
-    }
-
-  </style>
-
+</style>
 </head>
 
 
 <body>
 
-  <main class="pagina">
+<main class="pagina">
+
+
+<!-- ==========================================
+GLOBOS
+=========================================== -->
+
+<div class="globo globo-izq">
+
+<svg viewBox="0 0 120 190">
+
+<ellipse
+cx="60"
+cy="65"
+rx="45"
+ry="60"
+fill="#dce9ee"
+stroke="#7698a7"
+stroke-width="2"
+/>
+
+<path
+d="M60 5 C45 25 43 90 60 125"
+fill="none"
+stroke="#ffffff"
+stroke-width="12"
+opacity=".8"
+/>
+
+<path
+d="M60 5 C75 25 77 90 60 125"
+fill="none"
+stroke="#a9c2cd"
+stroke-width="10"
+opacity=".8"
+/>
+
+<path
+d="M45 120 L52 145 M75 120 L68 145"
+stroke="#708c98"
+stroke-width="2"
+/>
+
+<rect
+x="48"
+y="145"
+width="24"
+height="19"
+rx="3"
+fill="#c7a988"
+stroke="#8d7760"
+/>
+
+</svg>
+
+</div>
+
+
+<div class="globo globo-der">
+
+<svg viewBox="0 0 120 190">
+
+<ellipse
+cx="60"
+cy="65"
+rx="45"
+ry="60"
+fill="#f3eadb"
+stroke="#7698a7"
+stroke-width="2"
+/>
+
+<path
+d="M60 5 C45 25 43 90 60 125"
+fill="none"
+stroke="#ffffff"
+stroke-width="12"
+opacity=".8"
+/>
+
+<path
+d="M60 5 C75 25 77 90 60 125"
+fill="none"
+stroke="#b9d0d9"
+stroke-width="10"
+opacity=".9"
+/>
+
+<path
+d="M45 120 L52 145 M75 120 L68 145"
+stroke="#708c98"
+stroke-width="2"
+/>
+
+<rect
+x="48"
+y="145"
+width="24"
+height="19"
+rx="3"
+fill="#c7a988"
+stroke="#8d7760"
+/>
 
+</svg>
 
-    <!-- ===================================================
-         TARJETA PRINCIPAL
-    ==================================================== -->
+</div>
 
-    <section class="invitacion">
 
+<div class="globo globo-pequeno">
 
-      <!-- MEDALLÓN -->
+<svg viewBox="0 0 120 190">
 
-      <div class="medallon">
+<ellipse
+cx="60"
+cy="65"
+rx="45"
+ry="60"
+fill="#d9e7ed"
+stroke="#7698a7"
+stroke-width="2"
+/>
 
-        <div class="cruz"></div>
+<path
+d="M60 5 C45 25 43 90 60 125"
+fill="none"
+stroke="#ffffff"
+stroke-width="12"
+/>
 
-      </div>
+<path
+d="M45 120 L52 145 M75 120 L68 145"
+stroke="#708c98"
+stroke-width="2"
+/>
 
+<rect
+x="48"
+y="145"
+width="24"
+height="19"
+rx="3"
+fill="#c7a988"
+stroke="#8d7760"
+/>
 
-      <!-- ENCABEZADO -->
+</svg>
 
-      <header class="encabezado">
+</div>
 
-        <p class="invitacion-texto">
-          Te invito a celebrar mi
-        </p>
 
-        <h1 class="bautizo">
-          BAUTIZO
-        </h1>
 
-        <p class="cumple">
-          Y CUMPLEAÑOS #1
-        </p>
+<!-- ==========================================
+INVITACIÓN
+=========================================== -->
 
-        <div class="linea-cumple"></div>
+<section class="invitacion">
 
 
-        <h2 class="nombre">
-          Mathías
-        </h2>
+<!-- CRUZ -->
 
-        <p class="apellido">
-          PARRA BELLORIN
-        </p>
+<div class="medallon-cruz">
 
+<img
+src="cruz-mathias.png"
+alt="Cruz del bautizo de Mathías"
+>
 
-        <div class="ramitas">
+</div>
 
-          <span>❧</span>
 
-          <span>❧</span>
 
-        </div>
+<!-- ENCABEZADO -->
 
-      </header>
+<header class="encabezado">
 
+<p class="intro">
+TE INVITO A CELEBRAR MI
+</p>
 
+<h1 class="bautizo">
+BAUTIZO
+</h1>
 
-      <!-- =================================================
-           MIS PADRES
-      ================================================== -->
+<p class="cumple">
+Y CUMPLEAÑOS #1
+</p>
 
-      <section class="familia">
+<div class="linea-cumple"></div>
 
+<h2 class="nombre">
+Mathías
+</h2>
 
-        <div class="familia-bloque">
+<p class="apellido">
+PARRA BELLORIN
+</p>
 
+<div class="adorno"></div>
 
-          <div class="titulo-con-lineas">
+</header>
 
-            <span class="linea"></span>
 
-            <h3>
-              MIS PADRES
-            </h3>
 
-            <span class="linea"></span>
+<!-- ==========================================
+MIS PADRES
+=========================================== -->
 
-          </div>
+<section class="familia">
 
+<div class="familia-bloque">
 
-          <div class="padres-nombres">
+<div class="titulo-lineas">
 
-            <span>
-              Senomary Bellorin
-            </span>
+<h3>
+MIS PADRES
+</h3>
 
-            <span
-              class="separador-vertical">
-            </span>
+</div>
 
-            <span>
-              Rafael Parra
-            </span>
 
-          </div>
+<div class="padres">
 
-        </div>
+<span>
+Senomary Bellorin
+</span>
 
+<span class="vertical"></span>
 
+<span>
+Rafael Parra
+</span>
 
-        <!-- ===============================================
-             PADRINOS
-        ================================================ -->
+</div>
 
-        <div
-          class="familia-bloque padrinos-bloque"
-        >
+</div>
 
 
-          <div class="titulo-con-lineas">
 
-            <span class="linea"></span>
+<!-- PADRINOS -->
 
-            <h3>
-              PADRINOS
-            </h3>
+<div class="familia-bloque">
 
-            <span class="linea"></span>
+<div class="titulo-lineas">
 
-          </div>
+<h3>
+PADRINOS
+</h3>
 
+</div>
 
-          <div class="padrinos-grid">
 
+<div class="padrinos">
 
-            <div>
+<div>
 
-              <p>
-                José Luis da Silva
-              </p>
+<p>
+Jose Luis Da Silva
+</p>
 
-              <p>
-                María Victoria Da Silva
-              </p>
+<p>
+María Victoria Da Silva
+</p>
 
-            </div>
+</div>
 
 
-            <span
-              class="separador-vertical padrinos-separador"
-            ></span>
+<span class="vertical"></span>
 
 
-            <div>
+<div>
 
-              <p>
-                Stefanny Calabrese
-              </p>
+<p>
+Stefanny Calabrese
+</p>
 
-              <p>
-                Elías Martínez
-              </p>
+<p>
+Elías Martínez
+</p>
 
-            </div>
+</div>
 
+</div>
 
-          </div>
+</div>
 
-        </div>
+</section>
 
 
-      </section>
 
+<div class="divisor"></div>
 
 
-      <!-- LÍNEA COMPLETA -->
 
-      <div class="divisor-completo"></div>
+<!-- ==========================================
+FECHA + IGLESIA
+=========================================== -->
 
+<section class="evento">
 
 
-      <!-- =================================================
-           FECHA + IGLESIA
-      ================================================== -->
+<!-- FECHA -->
 
-      <section class="evento">
+<div>
 
+<p class="dia-semana">
+SÁBADO
+</p>
 
-        <!-- FECHA -->
+<p class="dia">
+21
+</p>
 
-        <div class="fecha">
+<p class="mes">
+de noviembre
+</p>
 
-          <p class="dia-semana">
-            SÁBADO
-          </p>
+<p class="anio">
+2026
+</p>
 
-          <p class="dia-numero">
-            21
-          </p>
+</div>
 
-          <p class="mes">
-            de noviembre
-          </p>
 
-          <p class="anio">
-            2026
-          </p>
 
-        </div>
+<div class="evento-separador"></div>
 
 
 
-        <!-- SEPARADOR -->
+<!-- IGLESIA -->
 
-        <div class="evento-separador"></div>
+<div>
 
 
+<!-- LOGO DE IGLESIA -->
 
-        <!-- IGLESIA -->
+<div class="iglesia-logo">
 
-        <div class="iglesia-evento">
+<svg
+viewBox="0 0 64 64"
+fill="none"
+xmlns="http://www.w3.org/2000/svg"
+aria-hidden="true"
+>
 
+<!-- CRUZ -->
+<path
+d="M32 3V13M27 8H37"
+stroke="currentColor"
+stroke-width="3"
+stroke-linecap="round"
+/>
 
-          <div class="iglesia-icono">
-            ♱
-          </div>
+<!-- TECHO -->
+<path
+d="M18 27L32 15L46 27"
+stroke="currentColor"
+stroke-width="3"
+stroke-linecap="round"
+stroke-linejoin="round"
+/>
 
+<!-- TORRE -->
+<path
+d="M23 23V47H41V23"
+stroke="currentColor"
+stroke-width="3"
+stroke-linejoin="round"
+/>
 
-          <h3 class="iglesia-nombre">
-            Iglesia de
-            <br>
-            Desatanudos
-          </h3>
+<!-- CUERPO IZQUIERDO -->
+<path
+d="M23 34L11 42V58H23"
+stroke="currentColor"
+stroke-width="3"
+stroke-linecap="round"
+stroke-linejoin="round"
+/>
 
+<!-- CUERPO DERECHO -->
+<path
+d="M41 34L53 42V58H41"
+stroke="currentColor"
+stroke-width="3"
+stroke-linecap="round"
+stroke-linejoin="round"
+/>
 
-          <p class="santuario">
+<!-- PUERTA CENTRAL -->
+<path
+d="M28 58V45C28 40 36 40 36 45V58"
+stroke="currentColor"
+stroke-width="3"
+stroke-linecap="round"
+/>
 
-            Santuario de la Virgen
-            <br>
+<!-- PUERTAS LATERALES -->
+<path
+d="M15 58V48C15 44 21 44 21 48V58"
+stroke="currentColor"
+stroke-width="3"
+stroke-linecap="round"
+/>
 
-            de Desatanudos
-            <br>
+<path
+d="M43 58V48C43 44 49 44 49 48V58"
+stroke="currentColor"
+stroke-width="3"
+stroke-linecap="round"
+/>
 
-            Caracas, Miranda
+<!-- BASE -->
+<path
+d="M8 58H56"
+stroke="currentColor"
+stroke-width="3"
+stroke-linecap="round"
+/>
 
-          </p>
+</svg>
 
+</div>
 
-          <!-- HORA DEBAJO -->
 
-          <div class="hora">
+<h3 class="iglesia-nombre">
+Iglesia de
+<br>
+Desatanudos
+</h3>
 
-            <span class="reloj"></span>
 
-            <span>
-              2:00 PM
-            </span>
+<p class="santuario">
 
-          </div>
+Santuario de la Virgen
 
+<br>
 
-        </div>
+de Desatanudos
 
+<br>
 
-      </section>
+Caracas, Miranda
 
+</p>
 
 
-      <!-- =================================================
-           FRASE
-      ================================================== -->
+<div class="hora">
 
-      <div class="frase">
+<span class="reloj"></span>
 
-        La luz de Dios se enciende hoy en mi corazón
+<span>
+2:00 PM
+</span>
 
-        <br>
+</div>
 
-        para iluminar todo el camino de mi vida.
+</div>
 
 
-        <div class="ramitas ramitas-final">
+</section>
 
-          <span>❧</span>
 
-          <span>❧</span>
 
-        </div>
+<!-- FRASE -->
 
+<div class="frase">
 
-      </div>
+La luz de Dios se enciende hoy en mi corazón
 
+<br>
 
-    </section>
+para iluminar todo el camino de mi vida.
 
+<div class="adorno"></div>
 
+</div>
 
-    <!-- ===================================================
-         CUENTA REGRESIVA
-    ==================================================== -->
 
-    <section class="countdown-section">
+</section>
 
 
-      <h2 class="countdown-title">
-        Falta muy poquito...
-      </h2>
 
+<!-- ==========================================
+CONTADOR
+=========================================== -->
 
-      <div class="countdown">
+<section class="contador-seccion">
 
+<h2 class="contador-titulo">
+Falta muy poquito...
+</h2>
 
-        <div class="countdown-box">
 
-          <span
-            class="countdown-number"
-            id="days"
-          >
-            000
-          </span>
+<div class="contador">
 
-          <span class="countdown-label">
-            DÍAS
-          </span>
 
-        </div>
+<div class="contador-caja">
 
+<span
+class="numero"
+id="days"
+>
+000
+</span>
 
-        <div class="countdown-box">
+<span class="etiqueta">
+DÍAS
+</span>
 
-          <span
-            class="countdown-number"
-            id="hours"
-          >
-            00
-          </span>
+</div>
 
-          <span class="countdown-label">
-            HORAS
-          </span>
 
-        </div>
+<div class="contador-caja">
 
+<span
+class="numero"
+id="hours"
+>
+00
+</span>
 
-        <div class="countdown-box">
+<span class="etiqueta">
+HORAS
+</span>
 
-          <span
-            class="countdown-number"
-            id="minutes"
-          >
-            00
-          </span>
+</div>
 
-          <span class="countdown-label">
-            MINUTOS
-          </span>
 
-        </div>
+<div class="contador-caja">
 
+<span
+class="numero"
+id="minutes"
+>
+00
+</span>
 
-        <div class="countdown-box">
+<span class="etiqueta">
+MINUTOS
+</span>
 
-          <span
-            class="countdown-number"
-            id="seconds"
-          >
-            00
-          </span>
+</div>
 
-          <span class="countdown-label">
-            SEGUNDOS
-          </span>
 
-        </div>
+<div class="contador-caja">
 
+<span
+class="numero"
+id="seconds"
+>
+00
+</span>
 
-      </div>
+<span class="etiqueta">
+SEGUNDOS
+</span>
 
+</div>
 
-    </section>
+</div>
 
+</section>
 
 
-    <!-- ===================================================
-         UBICACIÓN
-    ==================================================== -->
 
-    <section class="info-card">
+<!-- ==========================================
+UBICACIÓN
+=========================================== -->
 
+<section class="info">
 
-      <div class="info-top">
 
+<div class="info-arriba">
 
-        <div class="info-icon">
-          ⊕
-        </div>
 
+<!-- LOGO DE IGLESIA MÁS PEQUEÑO -->
 
-        <div>
+<div class="icono">
 
-          <p class="info-small">
-            Nuestra Iglesia
-          </p>
+<svg
+viewBox="0 0 64 64"
+fill="none"
+xmlns="http://www.w3.org/2000/svg"
+aria-hidden="true"
+>
 
+<path
+d="M32 4V13M27 8.5H37"
+stroke="currentColor"
+stroke-width="3"
+stroke-linecap="round"
+/>
 
-          <h2 class="info-title">
-            Iglesia Desatanudos
-          </h2>
+<path
+d="M19 27L32 16L45 27"
+stroke="currentColor"
+stroke-width="3"
+stroke-linecap="round"
+stroke-linejoin="round"
+/>
 
+<path
+d="M23 24V56H41V24"
+stroke="currentColor"
+stroke-width="3"
+/>
 
-          <p class="info-description">
+<path
+d="M23 36L11 43V56H23"
+stroke="currentColor"
+stroke-width="3"
+stroke-linejoin="round"
+/>
 
-            Santuario de la Virgen de Desatanudos
+<path
+d="M41 36L53 43V56H41"
+stroke="currentColor"
+stroke-width="3"
+stroke-linejoin="round"
+/>
 
-            <br>
+<path
+d="M28 56V44C28 39 36 39 36 44V56"
+stroke="currentColor"
+stroke-width="3"
+/>
 
-            Caracas, Miranda
+<path
+d="M8 56H56"
+stroke="currentColor"
+stroke-width="3"
+stroke-linecap="round"
+/>
 
-          </p>
+</svg>
 
+</div>
 
-        </div>
 
+<div>
 
-      </div>
+<p class="info-pequeno">
+NUESTRA IGLESIA
+</p>
 
+<h2>
+Iglesia Desatanudos
+</h2>
 
-      <a
-        class="boton"
-        href="https://maps.app.goo.gl/6RwFHW5Ai9RnGk5L6?g_st=iw"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+<p class="info-descripcion">
 
-        ⊕ &nbsp; VER EN GOOGLE MAPS
+Santuario de la Virgen de Desatanudos
 
-      </a>
+<br>
 
+Caracas, Miranda
 
-    </section>
+</p>
 
+</div>
 
+</div>
 
-    <!-- ===================================================
-         WHATSAPP
-    ==================================================== -->
 
-    <section class="info-card">
+<a
+class="boton"
+href="https://maps.app.goo.gl/6RwFHW5Ai9RnGk5L6?g_st=iw"
+target="_blank"
+rel="noopener noreferrer"
+>
+⌖ &nbsp; VER EN GOOGLE MAPS
+</a>
 
 
-      <div class="info-top">
+</section>
 
 
-        <div class="info-icon whatsapp">
-          ☎
-        </div>
 
+<!-- ==========================================
+WHATSAPP
+=========================================== -->
 
-        <div>
+<section class="info">
 
 
-          <p class="info-small">
-            Tu presencia es importante
-          </p>
+<div class="info-arriba">
 
 
-          <h2 class="info-title">
-            Confirma tu asistencia
-          </h2>
+<!-- LOGO WHATSAPP -->
 
+<div class="icono icono-whatsapp">
 
-          <p class="info-description">
+<svg
+viewBox="0 0 64 64"
+xmlns="http://www.w3.org/2000/svg"
+aria-hidden="true"
+>
 
-            Nos encantará contar contigo
+<!-- BURBUJA -->
 
-            en este día tan especial.
+<path
+d="
+M32 8
+C18.7 8 8 18.3 8 31
+C8 36.2 9.8 41 12.8 44.8
+L9.5 56
+L21.2 52.9
+C24.5 54.6 28.1 55.5 32 55.5
+C45.3 55.5 56 45.2 56 32.5
+C56 19.8 45.3 8 32 8
+Z
+"
+fill="none"
+stroke="white"
+stroke-width="4"
+stroke-linecap="round"
+stroke-linejoin="round"
+/>
 
-          </p>
 
+<!-- TELÉFONO WHATSAPP -->
 
-        </div>
+<path
+d="
+M23 20
+C21.5 21 20.7 23.1 21.2 25
+C23.7 34.3 30.6 41.2 39.8 43.8
+C41.8 44.4 43.9 43.5 45 42
+L48 37.7
+C48.7 36.7 48.4 35.3 47.3 34.7
+L40.8 31.5
+C39.8 31 38.6 31.3 38 32.2
+L35.8 35.2
+C32.2 33.4 29.5 30.7 27.7 27.2
+L30.5 24.8
+C31.4 24.1 31.6 22.9 31 21.9
+L27.8 16
+C27.1 14.8 25.5 14.6 24.5 15.5
+Z
+"
+fill="white"
+/>
 
+</svg>
 
-      </div>
+</div>
 
 
-      <a
-        class="boton boton-whatsapp"
-        href="https://wa.me/584148633713?text=Hola%2C%20confirmo%20mi%20asistencia%20al%20Bautizo%20y%20Cumplea%C3%B1os%20%231%20de%20Math%C3%ADas.%20%F0%9F%A4%8D"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+<div>
 
-        ☎ &nbsp; CONFIRMAR POR WHATSAPP
+<p class="info-pequeno">
+TU PRESENCIA ES IMPORTANTE
+</p>
 
-      </a>
+<h2>
+Confirma tu asistencia
+</h2>
 
+<p class="info-descripcion">
 
-    </section>
+Nos encantará contar contigo
 
+en este día tan especial.
 
+</p>
 
-    <!-- ===================================================
-         FOOTER
-    ==================================================== -->
+</div>
 
-    <footer class="footer">
+</div>
 
 
-      <p class="footer-nombre">
-        MATHÍAS PARRA BELLORIN
-      </p>
+<a
+class="boton boton-whatsapp"
+href="https://wa.me/584148633713?text=Hola%2C%20confirmo%20mi%20asistencia%20al%20Bautizo%20y%20Cumplea%C3%B1os%20%231%20de%20Math%C3%ADas.%20%F0%9F%A4%8D"
+target="_blank"
+rel="noopener noreferrer"
+>
 
+☎ &nbsp; CONFIRMAR POR WHATSAPP
 
-      <div class="footer-linea"></div>
+</a>
 
 
-      <p class="footer-evento">
-        BAUTIZO · 21 · XI · 2026
-      </p>
+</section>
 
 
-    </footer>
 
+<!-- ==========================================
+FOOTER
+=========================================== -->
 
-  </main>
+<footer>
 
+<p class="footer-nombre">
+MATHÍAS PARRA BELLORIN
+</p>
 
+<div class="footer-linea"></div>
 
-  <!-- =====================================================
-       CONTADOR
-  ====================================================== -->
+<p class="footer-evento">
+BAUTIZO · 21 · XI · 2026
+</p>
 
-  <script>
+</footer>
 
-    const eventDate =
-      new Date(
-        "2026-11-21T14:00:00-04:00"
-      ).getTime();
 
+</main>
 
-    function updateCountdown() {
 
 
-      const now =
-        new Date().getTime();
+<!-- ==========================================
+CUENTA REGRESIVA
+=========================================== -->
 
+<script>
 
-      const distance =
-        eventDate - now;
+const eventDate =
+new Date(
+"2026-11-21T14:00:00-04:00"
+).getTime();
 
 
+function updateCountdown() {
 
-      if (distance <= 0) {
+const now =
+new Date().getTime();
 
-        document
-          .getElementById("days")
-          .textContent = "000";
+const distance =
+eventDate - now;
 
 
-        document
-          .getElementById("hours")
-          .textContent = "00";
+if (distance <= 0) {
 
+document
+.getElementById("days")
+.textContent = "000";
 
-        document
-          .getElementById("minutes")
-          .textContent = "00";
+document
+.getElementById("hours")
+.textContent = "00";
 
+document
+.getElementById("minutes")
+.textContent = "00";
 
-        document
-          .getElementById("seconds")
-          .textContent = "00";
+document
+.getElementById("seconds")
+.textContent = "00";
 
+return;
+}
 
-        return;
 
-      }
+const days =
+Math.floor(
+distance /
+(1000 * 60 * 60 * 24)
+);
 
 
+const hours =
+Math.floor(
+(
+distance %
+(1000 * 60 * 60 * 24)
+) /
+(1000 * 60 * 60)
+);
 
-      const days =
-        Math.floor(
-          distance /
-          (1000 * 60 * 60 * 24)
-        );
 
+const minutes =
+Math.floor(
+(
+distance %
+(1000 * 60 * 60)
+) /
+(1000 * 60)
+);
 
 
-      const hours =
-        Math.floor(
-          (
-            distance %
-            (1000 * 60 * 60 * 24)
-          ) /
-          (1000 * 60 * 60)
-        );
+const seconds =
+Math.floor(
+(
+distance %
+(1000 * 60)
+) /
+1000
+);
 
 
+document
+.getElementById("days")
+.textContent =
+String(days).padStart(3, "0");
 
-      const minutes =
-        Math.floor(
-          (
-            distance %
-            (1000 * 60 * 60)
-          ) /
-          (1000 * 60)
-        );
 
+document
+.getElementById("hours")
+.textContent =
+String(hours).padStart(2, "0");
 
 
-      const seconds =
-        Math.floor(
-          (
-            distance %
-            (1000 * 60)
-          ) /
-          1000
-        );
+document
+.getElementById("minutes")
+.textContent =
+String(minutes).padStart(2, "0");
 
 
+document
+.getElementById("seconds")
+.textContent =
+String(seconds).padStart(2, "0");
 
-      document
-        .getElementById("days")
-        .textContent =
-        String(days)
-          .padStart(3, "0");
+}
 
 
+updateCountdown();
 
-      document
-        .getElementById("hours")
-        .textContent =
-        String(hours)
-          .padStart(2, "0");
+setInterval(
+updateCountdown,
+1000
+);
 
-
-
-      document
-        .getElementById("minutes")
-        .textContent =
-        String(minutes)
-          .padStart(2, "0");
-
-
-
-      document
-        .getElementById("seconds")
-        .textContent =
-        String(seconds)
-          .padStart(2, "0");
-
-
-    }
-
-
-    updateCountdown();
-
-
-    setInterval(
-      updateCountdown,
-      1000
-    );
-
-  </script>
+</script>
 
 
 </body>
